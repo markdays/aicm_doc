@@ -1,20 +1,16 @@
-.. AICloudMaster documentation master file, created by
-   sphinx-quickstart on Sun Jun 10 18:35:18 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Welcome to AICloudMaster's documentation!
-=========================================
+目录：
+^^^^^
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :glob:
 
     start/index
     strategies/index
     simsulation/index
     trading/index
-    
+
 
 Indices and tables
 ==================
