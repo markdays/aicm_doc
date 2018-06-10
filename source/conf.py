@@ -83,7 +83,17 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme' # alabaster
+# html_theme = 'sphinx_rtd_theme' # alabaster
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    try:
+        import sphinx_rtd_theme
+    except ImportError:
+        html_theme = 'default'
+        html_theme_path = []
+    else:
+        html_theme = 'sphinx_rtd_theme'
+        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -102,10 +112,15 @@ html_static_path = ['_static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'AICloudMasterdoc'
 
+# Use this kernel instead of the one stored in the notebook metadata:
+nbsphinx_kernel_name = 'python3'
+
+# Execute notebooks before conversion: 'always', 'never', 'auto' (default)
+nbsphinx_execute = 'never'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
+# latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
     # 'papersize': 'letterpaper',
@@ -121,25 +136,25 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
-}
+# }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'AICloudMaster.tex', 'AICloudMaster Documentation',
-     'Andy', 'manual'),
-]
+# latex_documents = [
+#     (master_doc, 'AICloudMaster.tex', 'AICloudMaster Documentation',
+#      'Andy', 'manual'),
+# ]
 
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'aicloudmaster', 'AICloudMaster Documentation',
-     [author], 1)
-]
+# man_pages = [
+#     (master_doc, 'aicloudmaster', 'AICloudMaster Documentation',
+#      [author], 1)
+# ]
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -147,11 +162,11 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'AICloudMaster', 'AICloudMaster Documentation',
-     author, 'AICloudMaster', 'One line description of project.',
-     'Miscellaneous'),
-]
+# texinfo_documents = [
+#     (master_doc, 'AICloudMaster', 'AICloudMaster Documentation',
+#      author, 'AICloudMaster', 'One line description of project.',
+#      'Miscellaneous'),
+# ]
 
 
 
