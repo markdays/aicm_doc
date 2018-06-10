@@ -12,27 +12,31 @@
     :caption: 策略开发
     :hidden:
 
-    strategies/01_download
-    strategies/02_install
-    strategies/03_setting
+    strategies/turorial
+    strategies/express
+    strategies/indactor
+    strategies/finance
+    strategies/stk_strategy
+    strategies/fut_strategy
+    strategies/backtest
+    strategies/extend
 
 .. toctree::
     :caption: 模拟交易
     :hidden:
 
-    simsulation/01_download
-    simsulation/02_install
-    simsulation/03_setting
+    simsulation/stock_sims
+    simsulation/future_sims
 
 .. toctree::
-    :caption: 云实盘
+    :caption: 实盘云服务器
     :hidden:
 
-    trading/01_download
-    trading/02_install
-    trading/03_setting
+    trading/cloudtrading
 
 .. toctree::
     :caption: 其他
     :hidden:
 
+    misc/development
+    misc/content
