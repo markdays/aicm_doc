@@ -6,9 +6,7 @@
     :caption: 开始
     :hidden:
 
-    start/01_download
-    start/02_install
-    start/03_setting
+    start/intro
 
 .. toctree::
     :caption: 策略开发
