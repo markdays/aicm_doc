@@ -1,8 +1,8 @@
 
 目录：
-^^^^^
+^^^^^^^^^
 
-.. toctree::
+..toctree::
    :maxdepth: 2
    :glob:
 
@@ -11,10 +11,3 @@
     simsulation/index
     trading/index
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
