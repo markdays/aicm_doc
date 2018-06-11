@@ -19,6 +19,8 @@
 下载安装
 ========================
 请首先关注微信公众号：aicloudmaster
+.. image:: _static/images/qrcode_aicm_258.jpg
+
 点击左下角菜单【获取程序】，然后根据提供的下载链接下载安装包。
 一共有两个安装包可以下载，分别是“策略开发测试”（QuantLab）和“模拟交易”（QuantRobot）
 
