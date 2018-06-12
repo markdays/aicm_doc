@@ -3,8 +3,8 @@
 ==================
 介绍
 ==================
-AICloudMaster是一套完整的量化投资平台。该平台由三个子系统组成：QuantLab策略开发子系统，QuantSimulation模拟交易子系
-统和QuantRobot实盘交易云服务子系统。
+AICloudMaster是一套完整的量化投资平台。该平台由三个子系统组成：QuantLab策略开发子系统，QuantRobot模拟交易子系
+统和QuantCloud实盘交易云服务子系统。平台全部用C/C++语言开发，相较其他脚本开发系统运行效率高。
 
 另外，平台提供了微信公众号和小程序云服务器客户端，对云服务器进行管理。
 
@@ -24,6 +24,7 @@ AICloudMaster是一套完整的量化投资平台。该平台由三个子系统�
 请首先关注微信公众号：aicloudmaster
 
 .. image:: /_static/images/qrcode_aicm_258.jpg
+    :align: center
 
 点击左下角菜单【获取程序】，然后根据提供的下载链接下载安装包。
 一共有两个安装包可以下载，分别是“策略开发测试”（QuantLab）和“模拟交易”（QuantRobot）
