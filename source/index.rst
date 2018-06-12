@@ -25,6 +25,7 @@
     :caption: 模拟交易
     :hidden:
 
+    simsulation/sims
     simsulation/stock_sims
     simsulation/future_sims
 
