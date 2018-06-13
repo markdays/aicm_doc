@@ -93,15 +93,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">运算符&amp;语句</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id7">表达式示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id8">算数运算符</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">等于&amp;不等式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">布尔运算符</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">通用函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">三角函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">控制结构语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">等于&amp;不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">布尔运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">通用函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">三角函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">控制结构语句</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id14">变量&amp;多语句</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id15">注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">变量&amp;多语句</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">注释</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="indactor.html">技术指标</a></li>
@@ -253,21 +253,346 @@
 <h2>表达式示例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id8">
 <h3>算数运算符<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id9">
-<h3>等于&amp;不等式<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id10">
-<h3>布尔运算符<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id11">
-<h3>通用函数<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id12">
-<h3>三角函数<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="95%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>运算符</td>
+<td>示例</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>相加 (eg: x + y)</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>相减 (eg: x - y)</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Multiplication between x and y.  (eg: x * y)</td>
+</tr>
+<tr class="row-odd"><td>/</td>
+<td>Division between x and y.  (eg: x / y)</td>
+</tr>
+<tr class="row-even"><td>%</td>
+<td>Modulus of x with respect to y.  (eg: x % y)</td>
+</tr>
+<tr class="row-odd"><td>^</td>
+<td>x to the power of y.  (eg: x ^ y)</td>
+</tr>
+<tr class="row-even"><td>:=</td>
+<td>Assign the value of x to y. Where y is either a variable or vector type.  (eg: y := x)</td>
+</tr>
+<tr class="row-odd"><td>+=</td>
+<td>Increment x by the value of the expression on the right hand side. Where x is either a variable or vector type.  (eg: x += abs(y - z))</td>
+</tr>
+<tr class="row-even"><td>-=</td>
+<td>Decrement x by the value of the expression on the right hand side. Where x is either a variable or vector type. (eg: x[i] -= abs(y + z))</td>
+</tr>
+<tr class="row-odd"><td><a href="#id9"><span class="problematic" id="id10">*</span></a>=</td>
+<td>Assign the multiplication of x by the value of the expression on the righthand side to x. Where x is either a variable or vector type.  (eg: x <a href="#id11"><span class="problematic" id="id12">*</span></a>= abs(y / z))</td>
+</tr>
+<tr class="row-even"><td>/=</td>
+<td>Assign the division of x by the value of the expression on the right-hand side to x. Where x is either a variable or vector type.  (eg: x[i + j] /= abs(y * z))</td>
+</tr>
+<tr class="row-odd"><td>%=</td>
+<td>Assign x modulo the value of the expression on the right hand side to x. Where x is either a variable or vector type.  (eg: x[2] %= y ^ 2)</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="id13">
-<h3>控制结构语句<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<h3>等于&amp;不等式<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>运算符</td>
+<td>示例</td>
+</tr>
+<tr class="row-even"><td>== or =</td>
+<td>True only if x is strictly equal to y. (eg: x == y)</td>
+</tr>
+<tr class="row-odd"><td>&lt;&gt; or !=</td>
+<td>True only if x does not equal y. (eg: x &lt;&gt; y or x != y)</td>
+</tr>
+<tr class="row-even"><td>&lt;</td>
+<td>True only if x is less than y. (eg: x &lt; y)</td>
+</tr>
+<tr class="row-odd"><td>&lt;=</td>
+<td>True only if x is less than or equal to y. (eg: x &lt;= y)</td>
+</tr>
+<tr class="row-even"><td>&gt;</td>
+<td>True only if x is greater than y. (eg: x &gt; y)</td>
+</tr>
+<tr class="row-odd"><td>&gt;=</td>
+<td>True only if x greater than or equal to y. (eg: x &gt;= y)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id14">
+<h3>布尔运算符<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>运算符</td>
+<td>示例</td>
+</tr>
+<tr class="row-even"><td>true</td>
+<td>True state or any value other than zero (typically 1).</td>
+</tr>
+<tr class="row-odd"><td>false</td>
+<td>False state, value of exactly zero.</td>
+</tr>
+<tr class="row-even"><td>and</td>
+<td>Logical AND, True only if x and y are both true.(eg: x and y)</td>
+</tr>
+<tr class="row-odd"><td>mand</td>
+<td>Multi-input logical AND, True only if all inputs are true. Left to right short-circuiting of expressions. (eg: mand(x &gt; y, z &lt; w, u or v, w and x))</td>
+</tr>
+<tr class="row-even"><td>mor</td>
+<td>Multi-input logical OR, True if at least one of the inputs are true. Left to right short-circuiting of expressions.  (eg: mor(x &gt; y, z &lt; w, u or v, w and x))</td>
+</tr>
+<tr class="row-odd"><td>nand</td>
+<td>Logical NAND, True only if either x or y is false. (eg: x nand y)</td>
+</tr>
+<tr class="row-even"><td>nor</td>
+<td>Logical NOR, True only if the result of x or y is false (eg: x nor y)</td>
+</tr>
+<tr class="row-odd"><td>not</td>
+<td>Logical NOT, Negate the logical sense of the input. (eg: not(x and y) == x nand y)</td>
+</tr>
+<tr class="row-even"><td>or</td>
+<td>Logical OR, True if either x or y is true. (eg: x or y)</td>
+</tr>
+<tr class="row-odd"><td>xor</td>
+<td>Logical XOR, True only if the logical states of x and y differ.  (eg: x xor y)</td>
+</tr>
+<tr class="row-even"><td>xnor</td>
+<td>Logical XNOR, True iff the biconditional of x and y is satisfied.  (eg: x xnor y)</td>
+</tr>
+<tr class="row-odd"><td>&amp;</td>
+<td>Similar to AND but with left to right expression short circuiting optimisation.  (eg: (x &amp; y) == (y and x))</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td>Similar to OR but with left to right expression short circuiting optimisation.  (eg: (x | y) == (y or x))</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id15">
+<h3>通用函数<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>函数</td>
+<td>示例</td>
+</tr>
+<tr class="row-even"><td>abs</td>
+<td>Absolute value of x.  (eg: abs(x))</td>
+</tr>
+<tr class="row-odd"><td>avg</td>
+<td>Average of all the inputs. (eg: avg(x,y,z,w,u,v) == (x + y + z + w + u + v) / 6)</td>
+</tr>
+<tr class="row-even"><td>ceil</td>
+<td>Smallest integer that is greater than or equal to x.</td>
+</tr>
+<tr class="row-odd"><td>clamp</td>
+<td>Clamp x in range between r0 and r1, where r0 &lt; r1. (eg: clamp(r0,x,r1))</td>
+</tr>
+<tr class="row-even"><td>equal</td>
+<td>Equality test between x and y using normalised epsilon</td>
+</tr>
+<tr class="row-odd"><td>erf</td>
+<td>Error function of x.  (eg: erf(x))</td>
+</tr>
+<tr class="row-even"><td>erfc</td>
+<td>Complimentary error function of x.  (eg: erfc(x))</td>
+</tr>
+<tr class="row-odd"><td>exp</td>
+<td>e to the power of x.  (eg: exp(x))</td>
+</tr>
+<tr class="row-even"><td>expm1</td>
+<td>e to the power of x minus 1, where x is very small. (eg: expm1(x))</td>
+</tr>
+<tr class="row-odd"><td>floor</td>
+<td>Largest integer that is less than or equal to x. (eg: floor(x))</td>
+</tr>
+<tr class="row-even"><td>frac</td>
+<td>Fractional portion of x.  (eg: frac(x))</td>
+</tr>
+<tr class="row-odd"><td>hypot</td>
+<td>Hypotenuse of x and y (eg: hypot(x,y) = sqrt(x*x + y*y))</td>
+</tr>
+<tr class="row-even"><td>iclamp</td>
+<td>Inverse-clamp x outside of the range r0 and r1. Where r0 &lt; r1. If x is within the range it will snap to the closest bound. (eg: iclamp(r0,x,r1)</td>
+</tr>
+<tr class="row-odd"><td>inrange</td>
+<td>In-range returns &#8216;true&#8217; when x is within the range r0 and r1. Where r0 &lt; r1.  (eg: inrange(r0,x,r1)</td>
+</tr>
+<tr class="row-even"><td>log</td>
+<td>Natural logarithm of x.  (eg: log(x))</td>
+</tr>
+<tr class="row-odd"><td>log10</td>
+<td>Base 10 logarithm of x.  (eg: log10(x))</td>
+</tr>
+<tr class="row-even"><td>log1p</td>
+<td>Natural logarithm of 1 + x, where x is very small. (eg: log1p(x))</td>
+</tr>
+<tr class="row-odd"><td>log2</td>
+<td>Base 2 logarithm of x.  (eg: log2(x))</td>
+</tr>
+<tr class="row-even"><td>logn</td>
+<td>Base N logarithm of x. where n is a positive integer. (eg: logn(x,8))</td>
+</tr>
+<tr class="row-odd"><td>max</td>
+<td>Largest value of all the inputs. (eg: max(x,y,z,w,u,v))</td>
+</tr>
+<tr class="row-even"><td>min</td>
+<td>Smallest value of all the inputs. (eg: min(x,y,z,w,u))</td>
+</tr>
+<tr class="row-odd"><td>mul</td>
+<td>Product of all the inputs. (eg: mul(x,y,z,w,u,v,t) == (x * y * z * w * u * v * t))</td>
+</tr>
+<tr class="row-even"><td>ncdf</td>
+<td>Normal cumulative distribution function.  (eg: ncdf(x))</td>
+</tr>
+<tr class="row-odd"><td>nequal</td>
+<td>Not-equal test between x and y using normalised epsilon</td>
+</tr>
+<tr class="row-even"><td>pow</td>
+<td>x to the power of y.  (eg: pow(x,y) == x ^ y)</td>
+</tr>
+<tr class="row-odd"><td>root</td>
+<td>Nth-Root of x. where n is a positive integer. (eg: root(x,3) == x^(1/3))</td>
+</tr>
+<tr class="row-even"><td>round</td>
+<td>Round x to the nearest integer.  (eg: round(x))</td>
+</tr>
+<tr class="row-odd"><td>roundn</td>
+<td>Round x to n decimal places  (eg: roundn(x,3)) where n &gt; 0 and is an integer. (eg: roundn(1.2345678,4) == 1.2346)</td>
+</tr>
+<tr class="row-even"><td>sgn</td>
+<td>Sign of x, -1 where x &lt; 0, +1 where x &gt; 0, else zero. (eg: sgn(x))</td>
+</tr>
+<tr class="row-odd"><td>sqrt</td>
+<td>Square root of x, where x &gt;= 0.  (eg: sqrt(x))</td>
+</tr>
+<tr class="row-even"><td>sum</td>
+<td>Sum of all the inputs. (eg: sum(x,y,z,w,u,v,t) == (x + y + z + w + u + v + t))</td>
+</tr>
+<tr class="row-odd"><td>swap</td>
+<td>Swap the values of the variables x and y and return the</td>
+</tr>
+<tr class="row-even"><td>&lt;=&gt;</td>
+<td>current value of y.  (eg: swap(x,y) or x &lt;=&gt; y)</td>
+</tr>
+<tr class="row-odd"><td>trunc</td>
+<td>Integer portion of x.  (eg: trunc(x))</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h3>三角函数<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>函数</td>
+<td>示例</td>
+</tr>
+<tr class="row-even"><td>acos</td>
+<td>Arc cosine of x expressed in radians. Interval [-1,+1] (eg: acos(x))</td>
+</tr>
+<tr class="row-odd"><td>acosh</td>
+<td>Inverse hyperbolic cosine of x expressed in radians.  (eg: acosh(x))</td>
+</tr>
+<tr class="row-even"><td>asin</td>
+<td>Arc sine of x expressed in radians. Interval [-1,+1] (eg: asin(x))</td>
+</tr>
+<tr class="row-odd"><td>asinh</td>
+<td>Inverse hyperbolic sine of x expressed in radians. (eg: asinh(x))</td>
+</tr>
+<tr class="row-even"><td>atan</td>
+<td>Arc tangent of x expressed in radians. Interval [-1,+1] (eg: atan(x))</td>
+</tr>
+<tr class="row-odd"><td>atan2</td>
+<td>Arc tangent of (x / y) expressed in radians. [-pi,+pi] eg: atan2(x,y)</td>
+</tr>
+<tr class="row-even"><td>atanh</td>
+<td>Inverse hyperbolic tangent of x expressed in radians. (eg: atanh(x))</td>
+</tr>
+<tr class="row-odd"><td>cos</td>
+<td>Cosine of x.  (eg: cos(x))</td>
+</tr>
+<tr class="row-even"><td>cosh</td>
+<td>Hyperbolic cosine of x.  (eg: cosh(x))</td>
+</tr>
+<tr class="row-odd"><td>cot</td>
+<td>Cotangent of x.  (eg: cot(x))</td>
+</tr>
+<tr class="row-even"><td>csc</td>
+<td>Cosecant of x.  (eg: csc(x))</td>
+</tr>
+<tr class="row-odd"><td>sec</td>
+<td>Secant of x.  (eg: sec(x))</td>
+</tr>
+<tr class="row-even"><td>sin</td>
+<td>Sine of x.  (eg: sin(x))</td>
+</tr>
+<tr class="row-odd"><td>sinc</td>
+<td>Sine cardinal of x.  (eg: sinc(x))</td>
+</tr>
+<tr class="row-even"><td>sinh</td>
+<td>Hyperbolic sine of x.  (eg: sinh(x))</td>
+</tr>
+<tr class="row-odd"><td>tan</td>
+<td>Tangent of x.  (eg: tan(x))</td>
+</tr>
+<tr class="row-even"><td>tanh</td>
+<td>Hyperbolic tangent of x.  (eg: tanh(x))</td>
+</tr>
+<tr class="row-odd"><td>deg2rad</td>
+<td>Convert x from degrees to radians.  (eg: deg2rad(x))</td>
+</tr>
+<tr class="row-even"><td>deg2grad</td>
+<td>Convert x from degrees to gradians.  (eg: deg2grad(x))</td>
+</tr>
+<tr class="row-odd"><td>rad2deg</td>
+<td>Convert x from radians to degrees.  (eg: rad2deg(x))</td>
+</tr>
+<tr class="row-even"><td>grad2deg</td>
+<td>Convert x from gradians to degrees.  (eg: grad2deg(x))</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>控制结构语句<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -425,15 +750,15 @@ case (x + 3) == (y * 4)   : y := abs(z / 6) + 7y;</div></blockquote>
 </table>
 </div>
 </div>
-<div class="section" id="id14">
-<h2>变量&amp;多语句<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h2>变量&amp;多语句<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <p>变量定义用关键字 var，当有多个表达式时，每个表达式以分号“;” 结尾。如：</p>
 <p>var x := 1;
 var y := 2;
 x := x + y; // 1 + 2 = 3</p>
 </div>
-<div class="section" id="id15">
-<h2>注释<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h2>注释<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
 <p>表达式中注释文本用双斜杠，可以是单独一行或表达式尾部</p>
 </div>
 </div>
