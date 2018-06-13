@@ -18,12 +18,9 @@
   "等式&不等式", "=, ==, <>, !=, <, <=, >, >="
   "逻辑操作", "and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false"
   "函数", "abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,
-
   log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round,
-
   roundn, sgn, sqrt, sum, swap, trunc"
   "三角函数", "acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,
-
   sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg"
   "控制结构", "if-then-else, switch-case, return"
   "循环语句", "while, for, repeat-until, break, continue"
