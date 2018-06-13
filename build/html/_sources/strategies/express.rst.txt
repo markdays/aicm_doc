@@ -18,10 +18,10 @@
   "等式&不等式", "=, ==, <>, !=, <, <=, >, >="
   "逻辑操作", "and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false"
   "函数", "abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,
-   log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn,
-   sgn, sqrt, sum, swap, trunc"
+  |log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn,
+  |sgn, sqrt, sum, swap, trunc"
   "三角函数", "acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,
-  sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg"
+  |sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg"
   "控制结构", "if-then-else, switch-case, return"
   "循环语句", "while, for, repeat-until, break, continue"
 
@@ -35,8 +35,8 @@
   :header: "运算符", "示例"
   :widths: 20, 60
 
-  ""+"", "相加 (eg: x + y)"
-  ""-"", "相减 (eg: x - y)"
+  "|+", "相加 (eg: x + y)"
+  "-", "相减 (eg: x - y)"
   ""*"", "Multiplication between x and y.  (eg: x * y)"
   "/", "Division between x and y.  (eg: x / y)"
   "%", "Modulus of x with respect to y.  (eg: x % y)"
@@ -81,7 +81,7 @@
   "xor  ", "Logical XOR, True only if the logical states of x and y differ.  (eg: x xor y)"
   "xnor ", "Logical XNOR, True iff the biconditional of x and y is satisfied.  (eg: x xnor y)"
   "&    ", "Similar to AND but with left to right expression short circuiting optimisation.  (eg: (x & y) == (y and x))"
-  "|    ", "Similar to OR but with left to right expression short circuiting optimisation.  (eg: (x | y) == (y or x))"
+  "||    ", "Similar to OR but with left to right expression short circuiting optimisation.  (eg: (x | y) == (y or x))"
 
 通用函数
 -------------------------------
