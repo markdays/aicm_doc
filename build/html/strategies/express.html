@@ -93,15 +93,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">运算符&amp;语句</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id7">表达式示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id8">算数运算符</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">等于&amp;不等式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">布尔运算符</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">通用函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">三角函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">控制结构语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">等于&amp;不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">布尔运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">通用函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">三角函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">控制结构语句</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id18">变量&amp;多语句</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id19">注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">变量&amp;多语句</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">注释</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="indactor.html">技术指标</a></li>
@@ -213,8 +213,7 @@
 <div class="section" id="id2">
 <h2>运算符&amp;语句<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>表达式求值程序支持以下基本功能算术运算、函数及过程:</p>
-<table border="1" class="colwidths-given docutils" id="id20">
-<caption><span class="caption-text">运算符&amp;语句</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="25%" />
 <col width="75%" />
@@ -236,10 +235,16 @@
 <td>and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false</td>
 </tr>
 <tr class="row-even"><td>函数</td>
-<td>abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log, log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn, sgn, sqrt, sum, swap, trunc</td>
+<td><dl class="first last docutils">
+<dt>abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,</dt>
+<dd>log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn,
+sgn, sqrt, sum, swap, trunc</dd>
+</dl>
+</td>
 </tr>
 <tr class="row-odd"><td>三角函数</td>
-<td>acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc, sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg</td>
+<td>acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,
+sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg</td>
 </tr>
 <tr class="row-even"><td>控制结构</td>
 <td>if-then-else, switch-case, return</td>
@@ -254,65 +259,9 @@
 <h2>表达式示例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id8">
 <h3>算数运算符<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="colwidths-given docutils" id="id21">
-<caption><span class="caption-text">算数运算符</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col width="25%" />
-<col width="75%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">运算符</th>
-<th class="head">示例</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>++</td>
-<td>相加 (eg: x + y)</td>
-</tr>
-<tr class="row-odd"><td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
-<td>相减 (eg: x - y)</td>
-</tr>
-<tr class="row-even"><td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
-<td>Multiplication between x and y.  (eg: x * y)</td>
-</tr>
-<tr class="row-odd"><td>/</td>
-<td>Division between x and y.  (eg: x / y)</td>
-</tr>
-<tr class="row-even"><td>%</td>
-<td>Modulus of x with respect to y.  (eg: x % y)</td>
-</tr>
-<tr class="row-odd"><td>^</td>
-<td>x to the power of y.  (eg: x ^ y)</td>
-</tr>
-<tr class="row-even"><td>:=</td>
-<td>Assign the value of x to y. Where y is either a variable or vector type.  (eg: y := x)</td>
-</tr>
-<tr class="row-odd"><td>+=</td>
-<td>Increment x by the value of the expression on the right hand side. Where x is either a variable or vector type.  (eg: x += abs(y - z))</td>
-</tr>
-<tr class="row-even"><td>-=</td>
-<td>Decrement x by the value of the expression on the right hand side. Where x is either a variable or vector type. (eg: x[i] -= abs(y + z))</td>
-</tr>
-<tr class="row-odd"><td><a href="#id9"><span class="problematic" id="id10">*</span></a>=</td>
-<td>Assign the multiplication of x by the value of the expression on the righthand side to x. Where x is either a variable or vector type.  (eg: x <a href="#id11"><span class="problematic" id="id12">*</span></a>= abs(y / z))</td>
-</tr>
-<tr class="row-even"><td>/=</td>
-<td>Assign the division of x by the value of the expression on the right-hand side to x. Where x is either a variable or vector type.  (eg: x[i + j] /= abs(y * z))</td>
-</tr>
-<tr class="row-odd"><td>%=</td>
-<td>Assign x modulo the value of the expression on the right hand side to x. Where x is either a variable or vector type.  (eg: x[2] %= y ^ 2)</td>
-</tr>
-</tbody>
-</table>
 </div>
-<div class="section" id="id13">
-<h3>等于&amp;不等式<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h3>等于&amp;不等式<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="25%" />
@@ -345,8 +294,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id14">
-<h3>布尔运算符<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>布尔运算符<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="25%" />
@@ -403,8 +352,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id15">
-<h3>通用函数<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h3>通用函数<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="25%" />
@@ -521,8 +470,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id16">
-<h3>三角函数<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h3>三角函数<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="25%" />
@@ -600,8 +549,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id17">
-<h3>控制结构语句<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>控制结构语句<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -759,15 +708,15 @@ case (x + 3) == (y * 4)   : y := abs(z / 6) + 7y;</div></blockquote>
 </table>
 </div>
 </div>
-<div class="section" id="id18">
-<h2>变量&amp;多语句<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h2>变量&amp;多语句<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <p>变量定义用关键字 var，当有多个表达式时，每个表达式以分号“;” 结尾。如：</p>
 <p>var x := 1;
 var y := 2;
 x := x + y; // 1 + 2 = 3</p>
 </div>
-<div class="section" id="id19">
-<h2>注释<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h2>注释<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <p>表达式中注释文本用双斜杠，可以是单独一行或表达式尾部</p>
 </div>
 </div>

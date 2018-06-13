@@ -9,7 +9,7 @@
 
 表达式求值程序支持以下基本功能算术运算、函数及过程:
 
-.. csv-table:: 运算符&语句
+.. csv-table::
   :widths: 20, 60
 
   "类型", "标量, 向量, 字符串"
@@ -17,8 +17,11 @@
   "赋值", ":=, +=, -=, *=, /=, %="
   "等式&不等式", "=, ==, <>, !=, <, <=, >, >="
   "逻辑操作", "and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false"
-  "函数", "abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log, log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn, sgn, sqrt, sum, swap, trunc"
-  "三角函数", "acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc, sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg"
+  "函数", "abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,
+   log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn,
+   sgn, sqrt, sum, swap, trunc"
+  "三角函数", "acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,
+  sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg"
   "控制结构", "if-then-else, switch-case, return"
   "循环语句", "while, for, repeat-until, break, continue"
 
@@ -28,13 +31,13 @@
 算数运算符
 -------------------------------
 
-.. csv-table:: 算数运算符
+.. csv-table::
   :header: "运算符", "示例"
   :widths: 20, 60
 
-  "++", "相加 (eg: x + y)"
-  "-", "相减 (eg: x - y)"
-  "*", "Multiplication between x and y.  (eg: x * y)"
+  ""+"", "相加 (eg: x + y)"
+  ""-"", "相减 (eg: x - y)"
+  ""*"", "Multiplication between x and y.  (eg: x * y)"
   "/", "Division between x and y.  (eg: x / y)"
   "%", "Modulus of x with respect to y.  (eg: x % y)"
   "^", "x to the power of y.  (eg: x ^ y)"
