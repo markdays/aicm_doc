@@ -18,10 +18,11 @@
   "等式&不等式", "=, ==, <>, !=, <, <=, >, >="
   "逻辑操作", "and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false"
   "函数", "abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,
-  |log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn,
-  |sgn, sqrt, sum, swap, trunc"
+          log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round,
+          roundn, sgn, sqrt, sum, swap, trunc"
   "三角函数", "acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,
-  |sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg"
+              sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad,
+              grad2deg"
   "控制结构", "if-then-else, switch-case, return"
   "循环语句", "while, for, repeat-until, break, continue"
 
@@ -35,9 +36,9 @@
   :header: "运算符", "示例"
   :widths: 20, 60
 
-  "|+", "相加 (eg: x + y)"
-  "-", "相减 (eg: x - y)"
-  ""*"", "Multiplication between x and y.  (eg: x * y)"
+  "\+", "相加 (eg: x + y)"
+  "\-", "相减 (eg: x - y)"
+  "\*", "Multiplication between x and y.  (eg: x * y)"
   "/", "Division between x and y.  (eg: x / y)"
   "%", "Modulus of x with respect to y.  (eg: x % y)"
   "^", "x to the power of y.  (eg: x ^ y)"
@@ -165,8 +166,7 @@
 |          | 3. if (x > y) z;                                        |
 |          | 4. if (x <= 2*y) { z + w };                             |
 +----------+---------------------------------------------------------+
-| if-else  | eg::                                                    |
-|          | 1. if (x > y) z; else w;                                |
+| if-else  | 1. if (x > y) z; else w;                                |
 |          | 2. if (x > y) z; else if (w != u) v;                    |
 |          | 3. if (x < y) { z; w + 1; } else u;                     |
 |          | 4. if ((x != y) and (z > w))                            |
