@@ -91,9 +91,17 @@
 <li class="toctree-l1"><a class="reference internal" href="turorial.html">快速上手</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">表达式运算</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">运算符&amp;语句</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">表达式示例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">变量&amp;多语句</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">表达式示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">算数运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">等于&amp;不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">布尔运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">通用函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">三角函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">控制结构语句</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">变量&amp;多语句</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">注释</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="indactor.html">技术指标</a></li>
@@ -205,27 +213,61 @@
 <div class="section" id="id2">
 <h2>运算符&amp;语句<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>表达式求值程序支持以下基本功能算术运算、函数及过程:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>类型</td>
+<td>标量, 向量, 字符串</td>
+</tr>
+<tr class="row-even"><td>基本操作</td>
+<td>+, -, <a href="#id3"><span class="problematic" id="id4">*</span></a>, /, %, ^</td>
+</tr>
+<tr class="row-odd"><td>赋值</td>
+<td>:=, +=, -=, <a href="#id5"><span class="problematic" id="id6">*</span></a>=, /=, %=</td>
+</tr>
+<tr class="row-even"><td>等式&amp;不等式</td>
+<td>=, ==, &lt;&gt;, !=, &lt;, &lt;=, &gt;, &gt;=</td>
+</tr>
+<tr class="row-odd"><td>逻辑操作</td>
+<td>and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false.</td>
+</tr>
+<tr class="row-even"><td>函数</td>
+<td>abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log, log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round, roundn, sgn, sqrt, sum, swap, trunc</td>
+</tr>
+<tr class="row-odd"><td>三角函数</td>
+<td>acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc, sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg.</td>
+</tr>
+<tr class="row-even"><td>控制结构</td>
+<td>if-then-else, switch-case, return</td>
+</tr>
+<tr class="row-odd"><td>循环语句</td>
+<td>while, for, repeat-until, break, continue</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="section" id="id3">
-<h2>表达式示例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>算数运算符</li>
-</ol>
-<ol class="arabic simple" start="2">
-<li>等于&amp;不等式</li>
-</ol>
-<ol class="arabic simple" start="3">
-<li>布尔运算符</li>
-</ol>
-<ol class="arabic simple" start="4">
-<li>通用函数</li>
-</ol>
-<ol class="arabic simple" start="5">
-<li>三角函数</li>
-</ol>
-<ol class="arabic simple" start="6">
-<li>控制结构语句</li>
-</ol>
+<div class="section" id="id7">
+<h2>表达式示例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>算数运算符<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id9">
+<h3>等于&amp;不等式<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id10">
+<h3>布尔运算符<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id11">
+<h3>通用函数<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id12">
+<h3>三角函数<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id13">
+<h3>控制结构语句<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -382,15 +424,16 @@ case (x + 3) == (y * 4)   : y := abs(z / 6) + 7y;</div></blockquote>
 </tbody>
 </table>
 </div>
-<div class="section" id="id4">
-<h2>变量&amp;多语句<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id14">
+<h2>变量&amp;多语句<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <p>变量定义用关键字 var，当有多个表达式时，每个表达式以分号“;” 结尾。如：</p>
 <p>var x := 1;
 var y := 2;
 x := x + y; // 1 + 2 = 3</p>
 </div>
-<div class="section" id="id5">
-<h2>注释<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h2>注释<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <p>表达式中注释文本用双斜杠，可以是单独一行或表达式尾部</p>
 </div>
 </div>
