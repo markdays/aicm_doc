@@ -82,16 +82,19 @@
               
             
             
-              <p class="caption"><span class="caption-text">开始</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../start/intro.html">介绍</a></li>
-</ul>
-<p class="caption"><span class="caption-text">策略开发</span></p>
+              <p class="caption"><span class="caption-text">策略开发</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="turorial.html">快速上手</a></li>
-<li class="toctree-l1"><a class="reference internal" href="express.html">策略表达式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="express.html">表达式运算</a></li>
 <li class="toctree-l1"><a class="reference internal" href="indactor.html">技术指标</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">财务数据</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">财务数据</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">基本面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">主要财务指标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">每股指标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">经营发展能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">财务分析</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="stk_strategy.html">股票策略</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fut_strategy.html">期货策略</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backtest.html">回溯测试</a></li>
@@ -99,10 +102,11 @@
 </ul>
 <p class="caption"><span class="caption-text">模拟交易</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../simsulation/sims.html">QuantRobot程序</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simsulation/stock_sims.html">股票策略模拟</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simsulation/future_sims.html">期货策略模拟</a></li>
 </ul>
-<p class="caption"><span class="caption-text">实盘云服务器</span></p>
+<p class="caption"><span class="caption-text">实盘云服务</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../trading/cloudtrading.html">实盘交易</a></li>
 </ul>
@@ -195,6 +199,364 @@
 </style>
 <div class="section" id="strategy-finance">
 <span id="id1"></span><h1>财务数据<a class="headerlink" href="#strategy-finance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>基本面<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>总股本</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>国家股</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>发起人法人股</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>法人股</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>B股</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>流通股</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>职工股</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>转配股</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>总资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>流动资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>固定资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>无形资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>长期投资</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>流动负债</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>长期负债</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>资本公积金</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>净资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>主营收入</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>主营利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>其它利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>营业利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>投资收益</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>经营现金净流量</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>总现金净流量</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>存货</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>利益总额</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>税后利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>净利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>未分配利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>调整每股净资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>上市日期</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>修改日期</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>主要财务指标<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>基本每股收益</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>基本每股收益(扣除后)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>稀释每股收益</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>每股净资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>每股经营现金净流量</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>每股现金流量</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>每股资本公积金</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>每股盈余公积金</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>每股未分配利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>净资产收益率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>加权净资产收益率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>净资产收益率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>加权净资产收益率(扣除后)(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>总资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>归属母公司股东权益</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>主营业务收入</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>营业收入</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>主营成本</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>营业成本</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>投资收益</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>净利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>营业利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>利润总额</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>归属母公司净利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>经营现金流量净额</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h2>每股指标<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>每股收益</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>每股收益(扣除)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>每股净资产</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>每股资本公积金</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>每股未分配利润</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>每股经营现金净流量</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>每股现金流量</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>经营发展能力<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>存货周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>应收账款周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>总资产周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>营业收入增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>营业利润增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>利润总额增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>净利润增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>总资产增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>股东权益增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>净资产增长率(%)</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h2>财务分析<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>净利润率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>总资产收益率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>净资产收益率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>营业利润率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>销售毛利率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>销售净利率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>存货周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>固定资产周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>流动资产周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>总资产周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>股东权益周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>流动比率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>速动比率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>产权比率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>应收账款周转率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>利息保障倍数</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>资产负债率</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>营业收入增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>营业利润增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>总资产增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>固定资产增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>股东权益增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>净利润增长率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>股东权益比率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>固定资产比率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>流动资产比率(%)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>无形资产比率(%)</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 

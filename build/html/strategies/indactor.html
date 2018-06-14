@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="财务数据" href="finance.html" />
-    <link rel="prev" title="策略表达式" href="express.html" /> 
+    <link rel="prev" title="表达式运算" href="express.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,15 +82,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">开始</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../start/intro.html">介绍</a></li>
-</ul>
-<p class="caption"><span class="caption-text">策略开发</span></p>
+              <p class="caption"><span class="caption-text">策略开发</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="turorial.html">快速上手</a></li>
-<li class="toctree-l1"><a class="reference internal" href="express.html">策略表达式</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">技术指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="express.html">表达式运算</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">技术指标</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">价量因子</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">技术指标类因子</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">财务数据</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stk_strategy.html">股票策略</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fut_strategy.html">期货策略</a></li>
@@ -99,10 +99,11 @@
 </ul>
 <p class="caption"><span class="caption-text">模拟交易</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../simsulation/sims.html">QuantRobot程序</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simsulation/stock_sims.html">股票策略模拟</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simsulation/future_sims.html">期货策略模拟</a></li>
 </ul>
-<p class="caption"><span class="caption-text">实盘云服务器</span></p>
+<p class="caption"><span class="caption-text">实盘云服务</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../trading/cloudtrading.html">实盘交易</a></li>
 </ul>
@@ -195,6 +196,205 @@
 </style>
 <div class="section" id="strategy-indactor">
 <span id="id1"></span><h1>技术指标<a class="headerlink" href="#strategy-indactor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>价量因子<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>OPEN</td>
+<td>开盘价</td>
+</tr>
+<tr class="row-even"><td>HIGH</td>
+<td>最高价</td>
+</tr>
+<tr class="row-odd"><td>LOW</td>
+<td>最低价</td>
+</tr>
+<tr class="row-even"><td>CLOSE</td>
+<td>收盘价</td>
+</tr>
+<tr class="row-odd"><td>VOLUME</td>
+<td>成交量</td>
+</tr>
+<tr class="row-even"><td>TYPICAL_PRICE</td>
+<td>typical价</td>
+</tr>
+<tr class="row-odd"><td>NEW</td>
+<td>最新价</td>
+</tr>
+<tr class="row-even"><td>NEW_CHANGE_PERCENT</td>
+<td>涨跌幅百分比</td>
+</tr>
+<tr class="row-odd"><td>SHORT_TERM_HIGH</td>
+<td>短期（据配置参数决定，通常为25个Bar）最高价</td>
+</tr>
+<tr class="row-even"><td>LONG_TERM_HIGH</td>
+<td>长期（据配置参数决定，通常为100个Bar）最高价</td>
+</tr>
+<tr class="row-odd"><td>SHORT_TERM_LOW</td>
+<td>短期（据配置参数决定，通常为25个Bar）最低价</td>
+</tr>
+<tr class="row-even"><td>LONG_TERM_LOW</td>
+<td>长期（据配置参数决定，通常为100个Bar）最低价</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>技术指标类因子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>AD</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>DX</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ADX</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ADXR</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>APO</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>AROON_UP</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>AROON_DOWN</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ATR</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>BOLL_UP</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>BOLL_MID</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>BOLL_DOWN</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>CCI</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>CMO</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>MA_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>MA_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>EMA_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>EMA_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>DEMA_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>DEMA_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>KAMA_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>KAMA_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>MAMA_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>MAMA_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>T3_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>T3_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>TEMA_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>TEMA_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>TRIMA_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>TRIMA_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>TRIX_FAST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>TRIX_SLOW</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>MACD</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>MACD_DIFF</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>MACD_DEA</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>MFI</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>MOM</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>NATR</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>OBV</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ROC</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>RSI</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>SAR</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>TRANGE</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>TSF</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ULTOSC</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>WILLR</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>KDJ_K</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>KDJ_D</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -208,7 +408,7 @@
         <a href="finance.html" class="btn btn-neutral float-right" title="财务数据" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="express.html" class="btn btn-neutral" title="策略表达式" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="express.html" class="btn btn-neutral" title="表达式运算" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -64,7 +64,7 @@ AICloudMaster是一套完整的量化投资平台。该平台由三个子系统�
     simsulation/future_sims
 
 .. toctree::
-    :caption: 实盘云服务器
+    :caption: 实盘云服务
     :hidden:
 
     trading/cloudtrading

@@ -284,7 +284,7 @@ return
       else                                        
         return [y, x + y, 'result-set2'];          
         
-?:
+? :
 ~~~~~~~~~~~
 
 .. code-block:: javascript
@@ -316,7 +316,7 @@ return
       case (x + 3) == (y * 4)   : y := abs(z / 6) + 7y;    
     }                                                      
 
-[]
+[ ]
 ~~~~~~~~~~~
 
 .. code-block:: javascript
