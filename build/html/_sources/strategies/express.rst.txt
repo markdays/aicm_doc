@@ -7,9 +7,10 @@
 运算符&语句
 =========================
 
-表达式求值程序支持以下基本功能算术运算、函数及过程:
+表达式求值程序支持以下基本功能算术运算、函数和语句:
 
 .. csv-table::
+  :header: "分类", "运算符和函数"
   :widths: 20, 60
 
   "类型", "标量, 向量, 字符串"
@@ -41,9 +42,9 @@
   "\+", "加 (eg: x + y)"
   "\-", "减 (eg: x - y)"
   "\*", "乘 (eg: x * y)"
-  "/", "除 (eg: x / y)"
-  "%", "取模 (eg: x % y)"
-  "^", "幂 (eg: x ^ y)"
+  "/ ", "除 (eg: x / y)"
+  "% ", "取模 (eg: x % y)"
+  "^ ", "幂 (eg: x ^ y)"
   ":=", "赋值 (eg: y := x)"
   "+=", "加法赋值 (eg: x += abs(y - z))"
   "-=", "减法赋值 (eg: x[i] -= abs(y + z))"
@@ -155,136 +156,175 @@
 控制结构语句
 -------------------------------
 
-  if
-  ^^^^^^^^^^^
-  .. code-block:: javascript
-      :linenos:
+if
+~~~~~~~~~~~
 
-      1. if (x, y, z)
-      2. if ((x + 1) > 2y, z + 1, w / v)
-      3. if (x > y) z; 
-      4. if (x <= 2*y) { z + w }; 
+.. code-block:: javascript
+    :linenos:
 
-  if-else
-  ^^^^^^^^^^^
-  .. code-block:: javascript
-      :linenos:
+    1. if (x, y, z)
+    2. if ((x + 1) > 2y, z + 1, w / v)
+    3. if (x > y) z; 
+    4. if (x <= 2*y) { z + w }; 
 
-      1. if (x > y) z; else w;            
-      2. if (x > y) z; else if (w != u) v;
-      3. if (x < y) { z; w + 1; } else u; 
-      4. if ((x != y) and (z > w))        
-        {                                
-          y := sin(x) / u;               
-          z := w + 1;                    
-        }                                
-        else if (x > (z + 1))            
-        {                                
-          w := abs (x - y) + z;          
-          u := (x + 1) > 2y ? 2u : 3u;   
-        } 
+if-else
+~~~~~~~~~~~
 
-  switch
-  ^^^^^^^^^^^
-  .. code-block:: javascript
-      :linenos:
+.. code-block:: javascript
+    :linenos:
 
-      switch                                   
-      {                                        
-        case x > (y + z) : 2 * x / abs(y - z); 
-        case x < 3       : sin(x + y);         
-        default          : 1 + x;              
-      }                                        
+    1. if (x > y) z; else w;            
+    2. if (x > y) z; else if (w != u) v;
+    3. if (x < y) { z; w + 1; } else u; 
+    4. if ((x != y) and (z > w))        
+      {                                
+        y := sin(x) / u;               
+        z := w + 1;                    
+      }                                
+      else if (x > (z + 1))            
+      {                                
+        w := abs (x - y) + z;          
+        u := (x + 1) > 2y ? 2u : 3u;   
+      } 
 
-+----------+---------------------------------------------------------+
-| 结构     | 示例                                                    |
-+----------+---------------------------------------------------------+
-| if       | 1. if (x, y, z)                                         |
-|          | 2. if ((x + 1) > 2y, z + 1, w / v)                      |
-|          | 3. if (x > y) z;                                        |
-|          | 4. if (x <= 2*y) { z + w };                             |
-+----------+---------------------------------------------------------+
-| if-else  | 1. if (x > y) z; else w;                                |
-|          | 2. if (x > y) z; else if (w != u) v;                    |
-|          | 3. if (x < y) { z; w + 1; } else u;                     |
-|          | 4. if ((x != y) and (z > w))                            |
-|          |    {                                                    |
-|          |      y := sin(x) / u;                                   |
-|          |      z := w + 1;                                        |
-|          |    }                                                    |
-|          |    else if (x > (z + 1))                                |
-|          |    {                                                    |
-|          |      w := abs (x - y) + z;                              |
-|          |      u := (x + 1) > 2y ? 2u : 3u;                       |
-|          |    }                                                    |
-+----------+---------------------------------------------------------+
-| switch   | switch                                                  |
-|          | {                                                       |
-|          |   case x > (y + z) : 2 * x / abs(y - z);                |
-|          |   case x < 3       : sin(x + y);                        |
-|          |   default          : 1 + x;                             |
-|          | }                                                       |
-+----------+---------------------------------------------------------+
-| while    | while ((x -= 1) > 0)                                    |
-|          | {                                                       |
-|          |   y := x + z;                                           |
-|          |   w := u + y;                                           |
-|          | }                                                       |
-+----------+---------------------------------------------------------+
-| repeat/  | repeat                                                  |
-| until    |   y := x + z;                                           |
-|          |   w := u + y;                                           |
-|          | until ((x += 1) > 100)                                  |
-+----------+---------------------------------------------------------+
-| for      | for (var x := 0; (x < n) and (x != y); x += 1)          |
-|          | {                                                       |
-|          |   y := y + x / 2 - z;                                   |
-|          |   w := u + y;                                           |
-|          | }                                                       |
-+----------+---------------------------------------------------------+
-| break    | while ((i += 1) < 10)                                   |
-| break[]  | {                                                       |
-|          |   if (i < 5)                                            |
-|          |     j -= i + 2;                                         |
-|          |   else if (i % 2 == 0)                                  |
-|          |     break;                                              |
-|          |   else                                                  |
-|          |     break[2i + 3];                                      |
-|          | }                                                       |
-+----------+---------------------------------------------------------+
-| continue | for (var i := 0; i < 10; i += 1)                        |
-|          | {                                                       |
-|          |   if (i < 5)                                            |
-|          |     continue;                                           |
-|          |   j -= i + 2;                                           |
-|          | }                                                       |
-+----------+---------------------------------------------------------+
-| return   | 1. return [1];                                          |
-|          | 2. return [x, 'abx'];                                   |
-|          | 3. return [x, x + y,'abx'];                             |
-|          | 4. return [];                                           |
-|          | 5. if (x < y)                                           |
-|          |     return [x, x - y, 'result-set1', 123.456];          |
-|          |    else                                                 |
-|          |     return [y, x + y, 'result-set2'];                   |
-+----------+---------------------------------------------------------+
-| ?:       | 1. x ? y : z                                            |
-|          | 2. x + 1 > 2y ? z + 1 : (w / v)                         |
-|          | 3. min(x,y) > z ? (x < y + 1) ? x : y : (w * v)         |
-+----------+---------------------------------------------------------+
-| ~        | ~(i := x + 1, j := y / z, k := sin(w/u)) == (sin(w/u))) |
-|          | ~{i := x + 1; j := y / z; k := sin(w/u)} == (sin(w/u))) |
-+----------+---------------------------------------------------------+
-| [*]      | [*]                                                     |
-|          | {                                                       |
-|          |   case (x + 1) > (y - 2)    : x := z / 2 + sin(y / pi); |
-|          |   case (x + 2) < abs(y + 3) : w / 4 + min(5y,9);        |
-|          |   case (x + 3) == (y * 4)   : y := abs(z / 6) + 7y;     |
-|          | }                                                       |
-+----------+---------------------------------------------------------+
-| []       | 1. v[]                                                  |
-|          | 2. max_size := max(v0[],v1[],v2[],v3[])                 |
-+----------+---------------------------------------------------------+
+switch
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    switch                                   
+    {                                        
+      case x > (y + z) : 2 * x / abs(y - z); 
+      case x < 3       : sin(x + y);         
+      default          : 1 + x;              
+    }                                        
+
+while
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    while ((x -= 1) > 0)
+    {                   
+      y := x + z;       
+      w := u + y;       
+    }                   
+
+
+repeat-until
+~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    repeat                
+      y := x + z;         
+      w := u + y;         
+    until ((x += 1) > 100)
+
+
+
+for
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    for (var x := 0; (x < n) and (x != y); x += 1) 
+    {                                              
+      y := y + x / 2 - z;                          
+      w := u + y;                                  
+    }                                              
+
+
+break
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    while ((i += 1) < 10) 
+    {                     
+      if (i < 5)          
+        j -= i + 2;       
+      else if (i % 2 == 0)
+        break;            
+      else                
+        break[2i + 3];    
+    }                     
+
+
+continue
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    for (var i := 0; i < 10; i += 1)
+    {                               
+      if (i < 5)                    
+        continue;                   
+      j -= i + 2;                   
+    }
+    
+return
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    1. return [1];                                 
+    2. return [x, 'abx'];                          
+    3. return [x, x + y,'abx'];                    
+    4. return [];                                  
+    5. if (x < y)                                  
+        return [x, x - y, 'result-set1', 123.456]; 
+      else                                        
+        return [y, x + y, 'result-set2'];          
+        
+?:
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    1. x ? y : z                                   
+    2. x + 1 > 2y ? z + 1 : (w / v)                
+    3. min(x,y) > z ? (x < y + 1) ? x : y : (w * v)
+
+\~
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    ~(i := x + 1, j := y / z, k := sin(w/u)) == (sin(w/u)))
+    ~{i := x + 1; j := y / z; k := sin(w/u)} == (sin(w/u)))
+
+[*]
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+    [*]                                                    
+    {                                                      
+      case (x + 1) > (y - 2)    : x := z / 2 + sin(y / pi);
+      case (x + 2) < abs(y + 3) : w / 4 + min(5y,9);       
+      case (x + 3) == (y * 4)   : y := abs(z / 6) + 7y;    
+    }                                                      
+
+[]
+~~~~~~~~~~~
+
+.. code-block:: javascript
+    :linenos:
+
+1. v[]                                  
+2. max_size := max(v0[],v1[],v2[],v3[]) 
+
 
 变量&多语句
 =============================================

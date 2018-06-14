@@ -93,11 +93,26 @@
 <li class="toctree-l3"><a class="reference internal" href="#id14">布尔运算符</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id15">通用函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id16">三角函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">控制结构语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">控制结构语句</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#if">if</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#if-else">if-else</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switch">switch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#while">while</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repeat-until">repeat-until</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#for">for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#break">break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#continue">continue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#return">return</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">?:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">~</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">[*]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">[]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id18">变量&amp;多语句</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id19">注释</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">变量&amp;多语句</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">注释</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="indactor.html">技术指标</a></li>
@@ -208,43 +223,48 @@
 <span id="id1"></span><h1>表达式运算<a class="headerlink" href="#strategy-express" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>运算符&amp;语句<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>表达式求值程序支持以下基本功能算术运算、函数及过程:</p>
+<p>表达式求值程序支持以下基本功能算术运算、函数和语句:</p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="25%" />
 <col width="75%" />
 </colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">分类</th>
+<th class="head">运算符和函数</th>
+</tr>
+</thead>
 <tbody valign="top">
-<tr class="row-odd"><td>类型</td>
+<tr class="row-even"><td>类型</td>
 <td>标量, 向量, 字符串</td>
 </tr>
-<tr class="row-even"><td>基本操作</td>
+<tr class="row-odd"><td>基本操作</td>
 <td>+, -, <a href="#id3"><span class="problematic" id="id4">*</span></a>, /, %, ^</td>
 </tr>
-<tr class="row-odd"><td>赋值</td>
+<tr class="row-even"><td>赋值</td>
 <td>:=, +=, -=, <a href="#id5"><span class="problematic" id="id6">*</span></a>=, /=, %=</td>
 </tr>
-<tr class="row-even"><td>等式&amp;不等式</td>
+<tr class="row-odd"><td>等式&amp;不等式</td>
 <td>=, ==, &lt;&gt;, !=, &lt;, &lt;=, &gt;, &gt;=</td>
 </tr>
-<tr class="row-odd"><td>逻辑操作</td>
+<tr class="row-even"><td>逻辑操作</td>
 <td>and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false</td>
 </tr>
-<tr class="row-even"><td>函数</td>
+<tr class="row-odd"><td>函数</td>
 <td><p class="first">abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,</p>
 <p>log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round,</p>
 <p class="last">roundn, sgn, sqrt, sum, swap, trunc</p>
 </td>
 </tr>
-<tr class="row-odd"><td>三角函数</td>
+<tr class="row-even"><td>三角函数</td>
 <td><p class="first">acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,</p>
 <p class="last">sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg</p>
 </td>
 </tr>
-<tr class="row-even"><td>控制结构</td>
+<tr class="row-odd"><td>控制结构</td>
 <td>if-then-else, switch-case, return</td>
 </tr>
-<tr class="row-odd"><td>循环语句</td>
+<tr class="row-even"><td>循环语句</td>
 <td>while, for, repeat-until, break, continue</td>
 </tr>
 </tbody>
@@ -577,8 +597,9 @@
 </div>
 <div class="section" id="id17">
 <h3>控制结构语句<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<div class="section" id="if">
+<h4>if<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">)</span>
@@ -587,6 +608,9 @@
 <span class="mf">4.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="o">*</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span> <span class="nx">z</span> <span class="o">+</span> <span class="nx">w</span> <span class="p">};</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+<div class="section" id="if-else">
+<h4>if-else<a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -614,6 +638,9 @@
   <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+<div class="section" id="switch">
+<h4>switch<a class="headerlink" href="#switch" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -627,177 +654,160 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-</div></blockquote>
-<table border="1" class="docutils">
-<colgroup>
-<col width="15%" />
-<col width="85%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>结构</td>
-<td>示例</td>
-</tr>
-<tr class="row-even"><td>if</td>
-<td><ol class="first last arabic simple">
-<li>if (x, y, z)</li>
-<li>if ((x + 1) &gt; 2y, z + 1, w / v)</li>
-<li>if (x &gt; y) z;</li>
-<li>if (x &lt;= 2*y) { z + w };</li>
-</ol>
-</td>
-</tr>
-<tr class="row-odd"><td>if-else</td>
-<td><ol class="first last arabic">
-<li><p class="first">if (x &gt; y) z; else w;</p>
-</li>
-<li><p class="first">if (x &gt; y) z; else if (w != u) v;</p>
-</li>
-<li><p class="first">if (x &lt; y) { z; w + 1; } else u;</p>
-</li>
-<li><p class="first">if ((x != y) and (z &gt; w))
-{</p>
-<blockquote>
-<div><p>y := sin(x) / u;
-z := w + 1;</p>
-</div></blockquote>
-<p>}
-else if (x &gt; (z + 1))
-{</p>
-<blockquote>
-<div><p>w := abs (x - y) + z;
-u := (x + 1) &gt; 2y ? 2u : 3u;</p>
-</div></blockquote>
-<p>}</p>
-</li>
-</ol>
-</td>
-</tr>
-<tr class="row-even"><td>switch</td>
-<td><p class="first">switch
-{</p>
-<blockquote>
-<div>case x &gt; (y + z) : 2 * x / abs(y - z);
-case x &lt; 3       : sin(x + y);
-default          : 1 + x;</div></blockquote>
-<p class="last">}</p>
-</td>
-</tr>
-<tr class="row-odd"><td>while</td>
-<td><p class="first">while ((x -= 1) &gt; 0)
-{</p>
-<blockquote>
-<div>y := x + z;
-w := u + y;</div></blockquote>
-<p class="last">}</p>
-</td>
-</tr>
-<tr class="row-even"><td>repeat/
-until</td>
-<td><dl class="first docutils">
-<dt>repeat</dt>
-<dd>y := x + z;
-w := u + y;</dd>
-</dl>
-<p class="last">until ((x += 1) &gt; 100)</p>
-</td>
-</tr>
-<tr class="row-odd"><td>for</td>
-<td><p class="first">for (var x := 0; (x &lt; n) and (x != y); x += 1)
-{</p>
-<blockquote>
-<div>y := y + x / 2 - z;
-w := u + y;</div></blockquote>
-<p class="last">}</p>
-</td>
-</tr>
-<tr class="row-even"><td>break
-break[]</td>
-<td><p class="first">while ((i += 1) &lt; 10)
-{</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>if (i &lt; 5)</dt>
-<dd>j -= i + 2;</dd>
-<dt>else if (i % 2 == 0)</dt>
-<dd>break;</dd>
-<dt>else</dt>
-<dd>break[2i + 3];</dd>
-</dl>
-</div></blockquote>
-<p class="last">}</p>
-</td>
-</tr>
-<tr class="row-odd"><td>continue</td>
-<td><p class="first">for (var i := 0; i &lt; 10; i += 1)
-{</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>if (i &lt; 5)</dt>
-<dd>continue;</dd>
-</dl>
-<p>j -= i + 2;</p>
-</div></blockquote>
-<p class="last">}</p>
-</td>
-</tr>
-<tr class="row-even"><td>return</td>
-<td><ol class="first last arabic simple">
-<li>return [1];</li>
-<li>return [x, &#8216;abx&#8217;];</li>
-<li>return [x, x + y,&#8217;abx&#8217;];</li>
-<li>return [];</li>
-<li><dl class="first docutils">
-<dt>if (x &lt; y)</dt>
-<dd>return [x, x - y, &#8216;result-set1&#8217;, 123.456];</dd>
-<dt>else</dt>
-<dd>return [y, x + y, &#8216;result-set2&#8217;];</dd>
-</dl>
-</li>
-</ol>
-</td>
-</tr>
-<tr class="row-odd"><td>?:</td>
-<td><ol class="first last arabic simple">
-<li>x ? y : z</li>
-<li>x + 1 &gt; 2y ? z + 1 : (w / v)</li>
-<li>min(x,y) &gt; z ? (x &lt; y + 1) ? x : y : (w * v)</li>
-</ol>
-</td>
-</tr>
-<tr class="row-even"><td>~</td>
-<td>~(i := x + 1, j := y / z, k := sin(w/u)) == (sin(w/u)))
-~{i := x + 1; j := y / z; k := sin(w/u)} == (sin(w/u)))</td>
-</tr>
-<tr class="row-odd"><td>[*]</td>
-<td><p class="first">[*]
-{</p>
-<blockquote>
-<div>case (x + 1) &gt; (y - 2)    : x := z / 2 + sin(y / pi);
-case (x + 2) &lt; abs(y + 3) : w / 4 + min(5y,9);
-case (x + 3) == (y * 4)   : y := abs(z / 6) + 7y;</div></blockquote>
-<p class="last">}</p>
-</td>
-</tr>
-<tr class="row-even"><td>[]</td>
-<td><ol class="first last arabic simple">
+</div>
+<div class="section" id="while">
+<h4>while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">((</span><span class="nx">x</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">y</span> <span class="o">:=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">z</span><span class="p">;</span>
+  <span class="nx">w</span> <span class="o">:=</span> <span class="nx">u</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="repeat-until">
+<h4>repeat-until<a class="headerlink" href="#repeat-until" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">repeat</span>
+  <span class="nx">y</span> <span class="o">:=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">z</span><span class="p">;</span>
+  <span class="nx">w</span> <span class="o">:=</span> <span class="nx">u</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="nx">until</span> <span class="p">((</span><span class="nx">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="for">
+<h4>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">x</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">)</span> <span class="nx">and</span> <span class="p">(</span><span class="nx">x</span> <span class="o">!=</span> <span class="nx">y</span><span class="p">);</span> <span class="nx">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">y</span> <span class="o">:=</span> <span class="nx">y</span> <span class="o">+</span> <span class="nx">x</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="nx">z</span><span class="p">;</span>
+  <span class="nx">w</span> <span class="o">:=</span> <span class="nx">u</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="break">
+<h4>break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">((</span><span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="nx">j</span> <span class="o">-=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="k">break</span><span class="p">[</span><span class="mi">2</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="continue">
+<h4>continue<a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="k">continue</span><span class="p">;</span>
+  <span class="nx">j</span> <span class="o">-=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="return">
+<h4>return<a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="mf">2.</span> <span class="k">return</span> <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="s1">&#39;abx&#39;</span><span class="p">];</span>
+<span class="mf">3.</span> <span class="k">return</span> <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">,</span><span class="s1">&#39;abx&#39;</span><span class="p">];</span>
+<span class="mf">4.</span> <span class="k">return</span> <span class="p">[];</span>
+<span class="mf">5.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="nx">x</span> <span class="o">-</span> <span class="nx">y</span><span class="p">,</span> <span class="s1">&#39;result-set1&#39;</span><span class="p">,</span> <span class="mf">123.456</span><span class="p">];</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nx">y</span><span class="p">,</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">,</span> <span class="s1">&#39;result-set2&#39;</span><span class="p">];</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id18">
+<h4>?:<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="nx">x</span> <span class="o">?</span> <span class="nx">y</span> <span class="o">:</span> <span class="nx">z</span>
+<span class="mf">2.</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="nx">y</span> <span class="o">?</span> <span class="nx">z</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">(</span><span class="nx">w</span> <span class="o">/</span> <span class="nx">v</span><span class="p">)</span>
+<span class="mf">3.</span> <span class="nx">min</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nx">z</span> <span class="o">?</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">x</span> <span class="o">:</span> <span class="nx">y</span> <span class="o">:</span> <span class="p">(</span><span class="nx">w</span> <span class="o">*</span> <span class="nx">v</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id19">
+<h4>~<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">~</span><span class="p">(</span><span class="nx">i</span> <span class="o">:=</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">j</span> <span class="o">:=</span> <span class="nx">y</span> <span class="o">/</span> <span class="nx">z</span><span class="p">,</span> <span class="nx">k</span> <span class="o">:=</span> <span class="nx">sin</span><span class="p">(</span><span class="nx">w</span><span class="o">/</span><span class="nx">u</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="nx">sin</span><span class="p">(</span><span class="nx">w</span><span class="o">/</span><span class="nx">u</span><span class="p">)))</span>
+<span class="o">~</span><span class="p">{</span><span class="nx">i</span> <span class="o">:=</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">:=</span> <span class="nx">y</span> <span class="o">/</span> <span class="nx">z</span><span class="p">;</span> <span class="nx">k</span> <span class="o">:=</span> <span class="nx">sin</span><span class="p">(</span><span class="nx">w</span><span class="o">/</span><span class="nx">u</span><span class="p">)}</span> <span class="o">==</span> <span class="p">(</span><span class="nx">sin</span><span class="p">(</span><span class="nx">w</span><span class="o">/</span><span class="nx">u</span><span class="p">)))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id20">
+<h4>[*]<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">*</span><span class="p">]</span>
+<span class="p">{</span>
+  <span class="k">case</span> <span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nx">y</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>    <span class="o">:</span> <span class="nx">x</span> <span class="o">:=</span> <span class="nx">z</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="nx">sin</span><span class="p">(</span><span class="nx">y</span> <span class="o">/</span> <span class="nx">pi</span><span class="p">);</span>
+  <span class="k">case</span> <span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">:</span> <span class="nx">w</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">+</span> <span class="nx">min</span><span class="p">(</span><span class="mi">5</span><span class="nx">y</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span>
+  <span class="k">case</span> <span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="nx">y</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>   <span class="o">:</span> <span class="nx">y</span> <span class="o">:=</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">z</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">7</span><span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id21">
+<h4>[]<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple">
 <li>v[]</li>
 <li>max_size := max(v0[],v1[],v2[],v3[])</li>
 </ol>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
-<div class="section" id="id18">
-<h2>变量&amp;多语句<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id22">
+<h2>变量&amp;多语句<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
 <p>变量定义用关键字 var，当有多个表达式时，每个表达式以分号“;” 结尾。如：</p>
 <p>var x := 1;
 var y := 2;
 x := x + y; // 1 + 2 = 3</p>
 </div>
-<div class="section" id="id19">
-<h2>注释<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h2>注释<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
 <p>表达式中注释文本用双斜杠（//），可以是单独一行或表达式尾部</p>
 </div>
 </div>
