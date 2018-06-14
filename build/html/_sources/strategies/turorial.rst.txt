@@ -12,17 +12,26 @@ QuantLab程序的主界面如下图所示：
 开发策略的第一步就编写策略，每个策略又分为，五个部分，分别是：入市、止损或止盈、离市、增仓和减仓。
 每个部分是一个表达式，下面举例如下：
 
-入市表达式：:
+入市表达式：
 
-    cross_up(MA_FAST, MA_SLOW)
+    | cross_up(MA_FAST, MA_SLOW)
 
-止损和止盈表达式：:
+.. note::
+    快周期移动均线上穿慢周期移动均线买入
 
-    COST_X_ATR > 3 or MAXDOWN_ATR > 0.6
+止损和止盈表达式：
 
-离市表达式：:
+    | COST_X_ATR < -2.0 or MAXDOWN_ATR > 0.6
 
-    cross_down(MA_FAST, MA_SLOW)
+.. note::
+    2倍ATR亏损止损，或者0.6倍ATR回撤止盈
+
+离市表达式：
+
+    | cross_down(MA_FAST, MA_SLOW)
+
+.. note::
+    快周期移动均线下穿慢周期移动均线卖出
 
 增仓和减仓可以不用设置。
 

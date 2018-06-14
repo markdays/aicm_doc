@@ -1,4 +1,4 @@
-.. _start-intro:
+.. _index:
 
 ==================
 介绍
@@ -26,6 +26,8 @@ AICloudMaster是一套完整的量化投资平台。该平台由三个子系统�
 
 .. image:: /_static/images/qrcode_aicm_258.jpg
     :align: center
+    :scale: 70%
+    :alt: 关注公众号，获取更多资讯！
 
 点击左下角菜单【获取程序】，然后根据提供的下载链接下载安装包。
 一共有两个安装包可以下载，分别是“策略开发测试”（QuantLab）和“模拟交易”（QuantRobot）
