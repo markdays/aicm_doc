@@ -235,13 +235,15 @@
 <td>and, mand, mor, nand, nor, not, or, shl, shr, xnor, xor, true, false</td>
 </tr>
 <tr class="row-even"><td>函数</td>
-<td>abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,
-log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round,
-roundn, sgn, sqrt, sum, swap, trunc</td>
+<td><p class="first">abs, avg, ceil, clamp, equal, erf, erfc,  exp, expm1, floor, frac,  log,</p>
+<p>log10, log1p,  log2, logn,  max,  min,  mul,  ncdf,  nequal,  root, round,</p>
+<p class="last">roundn, sgn, sqrt, sum, swap, trunc</p>
+</td>
 </tr>
 <tr class="row-odd"><td>三角函数</td>
-<td>acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,
-sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg</td>
+<td><p class="first">acos, acosh, asin, asinh, atan, atanh,  atan2, cos,  cosh, cot,  csc,</p>
+<p class="last">sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg</p>
+</td>
 </tr>
 <tr class="row-even"><td>控制结构</td>
 <td>if-then-else, switch-case, return</td>
@@ -268,40 +270,40 @@ sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg<
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>+</td>
-<td>相加 (eg: x + y)</td>
+<td>加 (eg: x + y)</td>
 </tr>
 <tr class="row-odd"><td>-</td>
-<td>相减 (eg: x - y)</td>
+<td>减 (eg: x - y)</td>
 </tr>
 <tr class="row-even"><td>*</td>
-<td>Multiplication between x and y.  (eg: x * y)</td>
+<td>乘 (eg: x * y)</td>
 </tr>
 <tr class="row-odd"><td>/</td>
-<td>Division between x and y.  (eg: x / y)</td>
+<td>除 (eg: x / y)</td>
 </tr>
 <tr class="row-even"><td>%</td>
-<td>Modulus of x with respect to y.  (eg: x % y)</td>
+<td>取模 (eg: x % y)</td>
 </tr>
 <tr class="row-odd"><td>^</td>
-<td>x to the power of y.  (eg: x ^ y)</td>
+<td>幂 (eg: x ^ y)</td>
 </tr>
 <tr class="row-even"><td>:=</td>
-<td>Assign the value of x to y. Where y is either a variable or vector type.  (eg: y := x)</td>
+<td>赋值 (eg: y := x)</td>
 </tr>
 <tr class="row-odd"><td>+=</td>
-<td>Increment x by the value of the expression on the right hand side. Where x is either a variable or vector type.  (eg: x += abs(y - z))</td>
+<td>加法赋值 (eg: x += abs(y - z))</td>
 </tr>
 <tr class="row-even"><td>-=</td>
-<td>Decrement x by the value of the expression on the right hand side. Where x is either a variable or vector type. (eg: x[i] -= abs(y + z))</td>
+<td>减法赋值 (eg: x[i] -= abs(y + z))</td>
 </tr>
 <tr class="row-odd"><td><a href="#id9"><span class="problematic" id="id10">*</span></a>=</td>
-<td>Assign the multiplication of x by the value of the expression on the righthand side to x. Where x is either a variable or vector type.  (eg: x <a href="#id11"><span class="problematic" id="id12">*</span></a>= abs(y / z))</td>
+<td>乘法赋值 (eg: x <a href="#id11"><span class="problematic" id="id12">*</span></a>= abs(y / z))</td>
 </tr>
 <tr class="row-even"><td>/=</td>
-<td>Assign the division of x by the value of the expression on the right-hand side to x. Where x is either a variable or vector type.  (eg: x[i + j] /= abs(y * z))</td>
+<td>除法赋值 (eg: x[i + j] /= abs(y * z))</td>
 </tr>
 <tr class="row-odd"><td>%=</td>
-<td>Assign x modulo the value of the expression on the right hand side to x. Where x is either a variable or vector type.  (eg: x[2] %= y ^ 2)</td>
+<td>取模赋值 (eg: x[2] %= y ^ 2)</td>
 </tr>
 </tbody>
 </table>
@@ -320,22 +322,22 @@ sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg<
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>== or =</td>
-<td>True only if x is strictly equal to y. (eg: x == y)</td>
+<td>相等 (eg: x == y)</td>
 </tr>
 <tr class="row-odd"><td>&lt;&gt; or !=</td>
-<td>True only if x does not equal y. (eg: x &lt;&gt; y or x != y)</td>
+<td>不相等 (eg: x &lt;&gt; y or x != y)</td>
 </tr>
 <tr class="row-even"><td>&lt;</td>
-<td>True only if x is less than y. (eg: x &lt; y)</td>
+<td>小于 (eg: x &lt; y)</td>
 </tr>
 <tr class="row-odd"><td>&lt;=</td>
-<td>True only if x is less than or equal to y. (eg: x &lt;= y)</td>
+<td>小于等于 (eg: x &lt;= y)</td>
 </tr>
 <tr class="row-even"><td>&gt;</td>
-<td>True only if x is greater than y. (eg: x &gt; y)</td>
+<td>大于 (eg: x &gt; y)</td>
 </tr>
 <tr class="row-odd"><td>&gt;=</td>
-<td>True only if x greater than or equal to y. (eg: x &gt;= y)</td>
+<td>大于等于 (eg: x &gt;= y)</td>
 </tr>
 </tbody>
 </table>
@@ -354,43 +356,43 @@ sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg<
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>true</td>
-<td>True state or any value other than zero (typically 1).</td>
+<td>真，任何不为零的值 (如： 1).</td>
 </tr>
 <tr class="row-odd"><td>false</td>
-<td>False state, value of exactly zero.</td>
+<td>假，任何为零的值</td>
 </tr>
 <tr class="row-even"><td>and</td>
-<td>Logical AND, True only if x and y are both true.(eg: x and y)</td>
+<td>与 (eg: x and y)</td>
 </tr>
 <tr class="row-odd"><td>mand</td>
-<td>Multi-input logical AND, True only if all inputs are true. Left to right short-circuiting of expressions. (eg: mand(x &gt; y, z &lt; w, u or v, w and x))</td>
+<td>多个与 (eg: mand(x &gt; y, z &lt; w, u or v, w and x))</td>
 </tr>
 <tr class="row-even"><td>mor</td>
-<td>Multi-input logical OR, True if at least one of the inputs are true. Left to right short-circuiting of expressions.  (eg: mor(x &gt; y, z &lt; w, u or v, w and x))</td>
+<td>多个或 (eg: mor(x &gt; y, z &lt; w, u or v, w and x))</td>
 </tr>
 <tr class="row-odd"><td>nand</td>
-<td>Logical NAND, True only if either x or y is false. (eg: x nand y)</td>
+<td>与非 (eg: x nand y)</td>
 </tr>
 <tr class="row-even"><td>nor</td>
-<td>Logical NOR, True only if the result of x or y is false (eg: x nor y)</td>
+<td>或非 (eg: x nor y)</td>
 </tr>
 <tr class="row-odd"><td>not</td>
-<td>Logical NOT, Negate the logical sense of the input. (eg: not(x and y) == x nand y)</td>
+<td>否 (eg: not(x and y) == x nand y)</td>
 </tr>
 <tr class="row-even"><td>or</td>
-<td>Logical OR, True if either x or y is true. (eg: x or y)</td>
+<td>逻辑或 (eg: x or y)</td>
 </tr>
 <tr class="row-odd"><td>xor</td>
-<td>Logical XOR, True only if the logical states of x and y differ.  (eg: x xor y)</td>
+<td>异或 (eg: x xor y)</td>
 </tr>
 <tr class="row-even"><td>xnor</td>
-<td>Logical XNOR, True iff the biconditional of x and y is satisfied.  (eg: x xnor y)</td>
+<td>异或非 (eg: x xnor y)</td>
 </tr>
 <tr class="row-odd"><td>&amp;</td>
-<td>Similar to AND but with left to right expression short circuiting optimisation.  (eg: (x &amp; y) == (y and x))</td>
+<td>与，同and (eg: (x &amp; y) == (y and x))</td>
 </tr>
 <tr class="row-even"><td>|</td>
-<td>Similar to OR but with left to right expression short circuiting optimisation.  (eg: (x | y) == (y or x))</td>
+<td>或，同or (eg: (x | y) == (y or x))</td>
 </tr>
 </tbody>
 </table>
@@ -409,106 +411,91 @@ sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg<
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>abs</td>
-<td>Absolute value of x.  (eg: abs(x))</td>
+<td>绝对值 (eg: abs(x))</td>
 </tr>
 <tr class="row-odd"><td>avg</td>
-<td>Average of all the inputs. (eg: avg(x,y,z,w,u,v) == (x + y + z + w + u + v) / 6)</td>
+<td>平均值 (eg: avg(x,y,z,w,u,v) == (x + y + z + w + u + v) / 6)</td>
 </tr>
 <tr class="row-even"><td>ceil</td>
-<td>Smallest integer that is greater than or equal to x.</td>
+<td>返回大于或者等于指定表达式的最小整数.</td>
 </tr>
 <tr class="row-odd"><td>clamp</td>
-<td>Clamp x in range between r0 and r1, where r0 &lt; r1. (eg: clamp(r0,x,r1))</td>
+<td>最小数值和最大数值指定返回值的范围。 (eg: clamp(r0,x,r1))</td>
 </tr>
 <tr class="row-even"><td>equal</td>
-<td>Equality test between x and y using normalised epsilon</td>
+<td>相等</td>
 </tr>
 <tr class="row-odd"><td>erf</td>
-<td>Error function of x.  (eg: erf(x))</td>
+<td>误差函数 (eg: erf(x))</td>
 </tr>
 <tr class="row-even"><td>erfc</td>
-<td>Complimentary error function of x.  (eg: erfc(x))</td>
+<td>互补误差函数 (eg: erfc(x))</td>
 </tr>
 <tr class="row-odd"><td>exp</td>
-<td>e to the power of x.  (eg: exp(x))</td>
+<td>以自然常数e为底的指数函数 (eg: exp(x))</td>
 </tr>
-<tr class="row-even"><td>expm1</td>
-<td>e to the power of x minus 1, where x is very small. (eg: expm1(x))</td>
+<tr class="row-even"><td>floor</td>
+<td>向下取整，即取不大于x的最大整数 (eg: floor(x))</td>
 </tr>
-<tr class="row-odd"><td>floor</td>
-<td>Largest integer that is less than or equal to x. (eg: floor(x))</td>
+<tr class="row-odd"><td>frac</td>
+<td>返回实数的小数部分  (eg: frac(x))</td>
 </tr>
-<tr class="row-even"><td>frac</td>
-<td>Fractional portion of x.  (eg: frac(x))</td>
-</tr>
-<tr class="row-odd"><td>hypot</td>
-<td>Hypotenuse of x and y (eg: hypot(x,y) = sqrt(x*x + y*y))</td>
-</tr>
-<tr class="row-even"><td>iclamp</td>
-<td>Inverse-clamp x outside of the range r0 and r1. Where r0 &lt; r1. If x is within the range it will snap to the closest bound. (eg: iclamp(r0,x,r1)</td>
+<tr class="row-even"><td>hypot</td>
+<td>计算直角三角形的斜边长 (eg: hypot(x,y) = sqrt(x*x + y*y))</td>
 </tr>
 <tr class="row-odd"><td>inrange</td>
-<td>In-range returns &#8216;true&#8217; when x is within the range r0 and r1. Where r0 &lt; r1.  (eg: inrange(r0,x,r1)</td>
+<td>范围内 (eg: inrange(r0,x,r1)</td>
 </tr>
 <tr class="row-even"><td>log</td>
-<td>Natural logarithm of x.  (eg: log(x))</td>
+<td>自然对数 (eg: log(x))</td>
 </tr>
 <tr class="row-odd"><td>log10</td>
-<td>Base 10 logarithm of x.  (eg: log10(x))</td>
+<td>底为10的对数 (eg: log10(x))</td>
 </tr>
 <tr class="row-even"><td>log1p</td>
-<td>Natural logarithm of 1 + x, where x is very small. (eg: log1p(x))</td>
+<td>1加自然对数 (eg: log1p(x))</td>
 </tr>
 <tr class="row-odd"><td>log2</td>
-<td>Base 2 logarithm of x.  (eg: log2(x))</td>
+<td>底为2的对数  (eg: log2(x))</td>
 </tr>
 <tr class="row-even"><td>logn</td>
-<td>Base N logarithm of x. where n is a positive integer. (eg: logn(x,8))</td>
+<td>底为n的对数 (eg: logn(x,8))</td>
 </tr>
 <tr class="row-odd"><td>max</td>
-<td>Largest value of all the inputs. (eg: max(x,y,z,w,u,v))</td>
+<td>最大值 (eg: max(x,y,z,w,u,v))</td>
 </tr>
 <tr class="row-even"><td>min</td>
-<td>Smallest value of all the inputs. (eg: min(x,y,z,w,u))</td>
+<td>最小值 (eg: min(x,y,z,w,u))</td>
 </tr>
 <tr class="row-odd"><td>mul</td>
-<td>Product of all the inputs. (eg: mul(x,y,z,w,u,v,t) == (x * y * z * w * u * v * t))</td>
-</tr>
-<tr class="row-even"><td>ncdf</td>
-<td>Normal cumulative distribution function.  (eg: ncdf(x))</td>
-</tr>
-<tr class="row-odd"><td>nequal</td>
-<td>Not-equal test between x and y using normalised epsilon</td>
+<td>求积 (eg: mul(x,y,z,w,u,v,t) == (x * y * z * w * u * v * t))</td>
 </tr>
 <tr class="row-even"><td>pow</td>
-<td>x to the power of y.  (eg: pow(x,y) == x ^ y)</td>
+<td>求 x 的 y 次幂（次方） (eg: pow(x,y) == x ^ y)</td>
 </tr>
-<tr class="row-odd"><td>root</td>
-<td>Nth-Root of x. where n is a positive integer. (eg: root(x,3) == x^(1/3))</td>
+<tr class="row-odd"><td>round</td>
+<td>x最近整数  (eg: round(x))</td>
 </tr>
-<tr class="row-even"><td>round</td>
-<td>Round x to the nearest integer.  (eg: round(x))</td>
+<tr class="row-even"><td>roundn</td>
+<td>(eg: roundn(1.2345678,4) == 1.2346)</td>
 </tr>
-<tr class="row-odd"><td>roundn</td>
-<td>Round x to n decimal places  (eg: roundn(x,3)) where n &gt; 0 and is an integer. (eg: roundn(1.2345678,4) == 1.2346)</td>
+<tr class="row-odd"><td>sgn</td>
+<td>符号, -1 小于零 x &lt; 0, +1 大于零, 否则为零. (eg: sgn(x))</td>
 </tr>
-<tr class="row-even"><td>sgn</td>
-<td>Sign of x, -1 where x &lt; 0, +1 where x &gt; 0, else zero. (eg: sgn(x))</td>
+<tr class="row-even"><td>sqrt</td>
+<td>平方 (eg: sqrt(x))</td>
 </tr>
-<tr class="row-odd"><td>sqrt</td>
-<td>Square root of x, where x &gt;= 0.  (eg: sqrt(x))</td>
+<tr class="row-odd"><td>sum</td>
+<td>求和 (eg: sum(x,y,z,w,u,v,t) == (x + y + z + w + u + v + t))</td>
 </tr>
-<tr class="row-even"><td>sum</td>
-<td>Sum of all the inputs. (eg: sum(x,y,z,w,u,v,t) == (x + y + z + w + u + v + t))</td>
+<tr class="row-even"><td>swap</td>
+<td>值交换</td>
 </tr>
-<tr class="row-odd"><td>swap</td>
-<td>Swap the values of the variables x and y and return the</td>
+<tr class="row-odd"><td>&lt;=&gt;</td>
+<td>值交换，同swap (eg: swap(x,y) or x &lt;=&gt; y)</td>
 </tr>
-<tr class="row-even"><td>&lt;=&gt;</td>
-<td>current value of y.  (eg: swap(x,y) or x &lt;=&gt; y)</td>
-</tr>
-<tr class="row-odd"><td>trunc</td>
-<td>Integer portion of x.  (eg: trunc(x))</td>
+<tr class="row-even"><td>trunc</td>
+<td>取整 (eg: trunc(x))</td>
 </tr>
 </tbody>
 </table>
@@ -527,67 +514,67 @@ sec,  sin, sinc,  sinh, tan, tanh, hypot, rad2deg, deg2grad,  deg2rad, grad2deg<
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>acos</td>
-<td>Arc cosine of x expressed in radians. Interval [-1,+1] (eg: acos(x))</td>
+<td>反余弦函数 (eg: acos(x))</td>
 </tr>
 <tr class="row-odd"><td>acosh</td>
-<td>Inverse hyperbolic cosine of x expressed in radians.  (eg: acosh(x))</td>
+<td>反双曲余弦值 (eg: acosh(x))</td>
 </tr>
 <tr class="row-even"><td>asin</td>
-<td>Arc sine of x expressed in radians. Interval [-1,+1] (eg: asin(x))</td>
+<td>反正弦函数 (eg: asin(x))</td>
 </tr>
 <tr class="row-odd"><td>asinh</td>
-<td>Inverse hyperbolic sine of x expressed in radians. (eg: asinh(x))</td>
+<td>反双曲正弦值 (eg: asinh(x))</td>
 </tr>
 <tr class="row-even"><td>atan</td>
-<td>Arc tangent of x expressed in radians. Interval [-1,+1] (eg: atan(x))</td>
+<td>反正切值 (eg: atan(x))</td>
 </tr>
 <tr class="row-odd"><td>atan2</td>
-<td>Arc tangent of (x / y) expressed in radians. [-pi,+pi] eg: atan2(x,y)</td>
+<td>指方位角，也可以理解为计算复数 x+yi 的辐角 eg: atan2(x,y)</td>
 </tr>
 <tr class="row-even"><td>atanh</td>
-<td>Inverse hyperbolic tangent of x expressed in radians. (eg: atanh(x))</td>
+<td>反双曲正切值 (eg: atanh(x))</td>
 </tr>
 <tr class="row-odd"><td>cos</td>
-<td>Cosine of x.  (eg: cos(x))</td>
+<td>余弦 (eg: cos(x))</td>
 </tr>
 <tr class="row-even"><td>cosh</td>
-<td>Hyperbolic cosine of x.  (eg: cosh(x))</td>
+<td>双曲余弦值 (eg: cosh(x))</td>
 </tr>
 <tr class="row-odd"><td>cot</td>
-<td>Cotangent of x.  (eg: cot(x))</td>
+<td>余切  (eg: cot(x))</td>
 </tr>
 <tr class="row-even"><td>csc</td>
-<td>Cosecant of x.  (eg: csc(x))</td>
+<td>余割  (eg: csc(x))</td>
 </tr>
 <tr class="row-odd"><td>sec</td>
-<td>Secant of x.  (eg: sec(x))</td>
+<td>正割  (eg: sec(x))</td>
 </tr>
 <tr class="row-even"><td>sin</td>
-<td>Sine of x.  (eg: sin(x))</td>
+<td>正弦  (eg: sin(x))</td>
 </tr>
 <tr class="row-odd"><td>sinc</td>
-<td>Sine cardinal of x.  (eg: sinc(x))</td>
+<td>sinc函数 (eg: sinc(x))</td>
 </tr>
 <tr class="row-even"><td>sinh</td>
-<td>Hyperbolic sine of x.  (eg: sinh(x))</td>
+<td>双曲正弦函数 (eg: sinh(x))</td>
 </tr>
 <tr class="row-odd"><td>tan</td>
-<td>Tangent of x.  (eg: tan(x))</td>
+<td>正切 (eg: tan(x))</td>
 </tr>
 <tr class="row-even"><td>tanh</td>
-<td>Hyperbolic tangent of x.  (eg: tanh(x))</td>
+<td>双曲正切 (eg: tanh(x))</td>
 </tr>
 <tr class="row-odd"><td>deg2rad</td>
-<td>Convert x from degrees to radians.  (eg: deg2rad(x))</td>
+<td>角度转换为弧度  (eg: deg2rad(x))</td>
 </tr>
 <tr class="row-even"><td>deg2grad</td>
-<td>Convert x from degrees to gradians.  (eg: deg2grad(x))</td>
+<td>角度转换为梯度  (eg: deg2grad(x))</td>
 </tr>
 <tr class="row-odd"><td>rad2deg</td>
-<td>Convert x from radians to degrees.  (eg: rad2deg(x))</td>
+<td>弧度转换为角度  (eg: rad2deg(x))</td>
 </tr>
 <tr class="row-even"><td>grad2deg</td>
-<td>Convert x from gradians to degrees.  (eg: grad2deg(x))</td>
+<td>梯度转换为角度  (eg: grad2deg(x))</td>
 </tr>
 </tbody>
 </table>
