@@ -196,43 +196,55 @@
 <img alt="../_images/quantlab_000.png" class="align-center" src="../_images/quantlab_000.png" />
 <p>开发策略的第一步就编写策略，每个策略又分为，五个部分，分别是：入市、止损或止盈、离市、增仓和减仓。
 每个部分是一个表达式，下面举例如下：</p>
-<p>入市表达式：</p>
-<blockquote>
-<div><div class="line-block">
-<div class="line">cross_up(MA_FAST, MA_SLOW)</div>
+<dl class="docutils">
+<dt>入市表达式：</dt>
+<dd><div class="first highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">cross_up</span><span class="p">(</span><span class="nx">MA_FAST</span><span class="p">,</span> <span class="nx">MA_SLOW</span><span class="p">)</span>
+</pre></div>
 </div>
-</div></blockquote>
-<div class="admonition note">
+<div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">快周期移动均线上穿慢周期移动均线买入</p>
 </div>
+</dd>
+</dl>
 <p>止损和止盈表达式：</p>
 <blockquote>
-<div><div class="line-block">
-<div class="line">COST_X_ATR &lt; -2.0 or MAXDOWN_ATR &gt; 0.6</div>
+<div><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">COST_X_ATR</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">2.0</span> <span class="nx">or</span> <span class="nx">MAXDOWN_ATR</span> <span class="o">&gt;</span> <span class="mf">0.6</span>
+</pre></div>
 </div>
-</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">2倍ATR亏损止损，或者0.6倍ATR回撤止盈</p>
 </div>
+</div></blockquote>
 <p>离市表达式：</p>
 <blockquote>
-<div><div class="line-block">
-<div class="line">cross_down(MA_FAST, MA_SLOW)</div>
+<div><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">cross_down</span><span class="p">(</span><span class="nx">MA_FAST</span><span class="p">,</span> <span class="nx">MA_SLOW</span><span class="p">)</span>
+</pre></div>
 </div>
-</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">快周期移动均线下穿慢周期移动均线卖出</p>
 </div>
-<p>增仓和减仓可以不用设置。</p>
+</div></blockquote>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">增仓和减仓可以不用设置。</p>
+</div>
 <p>上述表达式中，cross_up、cross_down是函数，MA_FAST、MA_SLOW、COST_X_ATR、MAXDOWN_ATR是技术指标和
 因子，具体参考技术指标、财务数据等章节。</p>
 <p>第二步，设定交易标的的范围。</p>
-<p>可选范围：上证A股、深证A股、中小板、创业板、基金、期货、EX（其他市场，如港股等）</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">可选范围：上证A股、深证A股、中小板、创业板、基金、期货、EX（其他市场，如港股等）</div>
+</div>
+</div></blockquote>
 <p>第三步，设定交易行情的周期频率。</p>
-<p>周期频率可选：5分钟、15分钟、30分钟、日、周、月等。</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">周期频率可选：5分钟、15分钟、30分钟、日、周、月等。</div>
+</div>
+</div></blockquote>
 <p>经过这样三个简单步骤，这样一个简单的策略就编写好了，然后就可以做回溯测试，看策略在历史数据上的运行效果。</p>
 </div>
 

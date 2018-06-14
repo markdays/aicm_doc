@@ -13,37 +13,43 @@ QuantLab程序的主界面如下图所示：
 每个部分是一个表达式，下面举例如下：
 
 入市表达式：
+    .. code:: javascript
+    
+        cross_up(MA_FAST, MA_SLOW)
 
-    | cross_up(MA_FAST, MA_SLOW)
-
-.. note::
-    快周期移动均线上穿慢周期移动均线买入
+    .. note::
+        快周期移动均线上穿慢周期移动均线买入
 
 止损和止盈表达式：
 
-    | COST_X_ATR < -2.0 or MAXDOWN_ATR > 0.6
+    .. code:: javascript
+    
+        COST_X_ATR < -2.0 or MAXDOWN_ATR > 0.6
 
-.. note::
-    2倍ATR亏损止损，或者0.6倍ATR回撤止盈
+    .. note::
+        2倍ATR亏损止损，或者0.6倍ATR回撤止盈
 
 离市表达式：
 
-    | cross_down(MA_FAST, MA_SLOW)
+    .. code:: javascript
+    
+        cross_down(MA_FAST, MA_SLOW)
 
-.. note::
-    快周期移动均线下穿慢周期移动均线卖出
+    .. note::
+        快周期移动均线下穿慢周期移动均线卖出
 
-增仓和减仓可以不用设置。
+.. hint::
+    增仓和减仓可以不用设置。
 
 上述表达式中，cross_up、cross_down是函数，MA_FAST、MA_SLOW、COST_X_ATR、MAXDOWN_ATR是技术指标和
 因子，具体参考技术指标、财务数据等章节。
 
 第二步，设定交易标的的范围。
 
-可选范围：上证A股、深证A股、中小板、创业板、基金、期货、EX（其他市场，如港股等）
+    | 可选范围：上证A股、深证A股、中小板、创业板、基金、期货、EX（其他市场，如港股等）
 
 第三步，设定交易行情的周期频率。
 
-周期频率可选：5分钟、15分钟、30分钟、日、周、月等。
+    | 周期频率可选：5分钟、15分钟、30分钟、日、周、月等。
 
 经过这样三个简单步骤，这样一个简单的策略就编写好了，然后就可以做回溯测试，看策略在历史数据上的运行效果。
