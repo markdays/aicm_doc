@@ -13,13 +13,16 @@ QuantLab程序的主界面如下图所示：
 每个部分是一个表达式，下面举例如下：
 
 入市表达式：::
-cross_up(MA_FAST, MA_SLOW)
+
+    cross_up(MA_FAST, MA_SLOW)
 
 止损和止盈表达式：::
-COST_X_ATR > 3 or MAXDOWN_ATR > 0.6
+
+    COST_X_ATR > 3 or MAXDOWN_ATR > 0.6
 
 离市表达式：::
-cross_down(MA_FAST, MA_SLOW)
+
+    cross_down(MA_FAST, MA_SLOW)
 
 增仓和减仓可以不用设置。
 

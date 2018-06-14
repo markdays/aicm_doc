@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="表达式运算" href="express.html" />
-    <link rel="prev" title="介绍" href="../start/intro.html" /> 
+    <link rel="prev" title="介绍" href="../index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,11 +82,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">开始</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../start/intro.html">介绍</a></li>
-</ul>
-<p class="caption"><span class="caption-text">策略开发</span></p>
+              <p class="caption"><span class="caption-text">策略开发</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">快速上手</a></li>
 <li class="toctree-l1"><a class="reference internal" href="express.html">表达式运算</a></li>
@@ -200,12 +196,18 @@
 <img alt="../_images/quantlab_000.png" class="align-center" src="../_images/quantlab_000.png" />
 <p>开发策略的第一步就编写策略，每个策略又分为，五个部分，分别是：入市、止损或止盈、离市、增仓和减仓。
 每个部分是一个表达式，下面举例如下：</p>
-<p>入市表达式：::
-cross_up(MA_FAST, MA_SLOW)</p>
-<p>止损和止盈表达式：::
-COST_X_ATR &gt; 3 or MAXDOWN_ATR &gt; 0.6</p>
-<p>离市表达式：::
-cross_down(MA_FAST, MA_SLOW)</p>
+<p>入市表达式：:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cross_up</span><span class="p">(</span><span class="n">MA_FAST</span><span class="p">,</span> <span class="n">MA_SLOW</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>止损和止盈表达式：:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">COST_X_ATR</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">MAXDOWN_ATR</span> <span class="o">&gt;</span> <span class="mf">0.6</span>
+</pre></div>
+</div>
+<p>离市表达式：:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cross_down</span><span class="p">(</span><span class="n">MA_FAST</span><span class="p">,</span> <span class="n">MA_SLOW</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>增仓和减仓可以不用设置。</p>
 <p>上述表达式中，cross_up、cross_down是函数，MA_FAST、MA_SLOW、COST_X_ATR、MAXDOWN_ATR是技术指标和
 因子，具体参考技术指标、财务数据等章节。</p>
@@ -227,7 +229,7 @@ cross_down(MA_FAST, MA_SLOW)</p>
         <a href="express.html" class="btn btn-neutral float-right" title="表达式运算" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../start/intro.html" class="btn btn-neutral" title="介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral" title="介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -577,6 +577,57 @@
 </div>
 <div class="section" id="id17">
 <h3>控制结构语句<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">)</span>
+<span class="mf">2.</span> <span class="k">if</span> <span class="p">((</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="nx">y</span><span class="p">,</span> <span class="nx">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">w</span> <span class="o">/</span> <span class="nx">v</span><span class="p">)</span>
+<span class="mf">3.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">y</span><span class="p">)</span> <span class="nx">z</span><span class="p">;</span>
+<span class="mf">4.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="o">*</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span> <span class="nx">z</span> <span class="o">+</span> <span class="nx">w</span> <span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">y</span><span class="p">)</span> <span class="nx">z</span><span class="p">;</span> <span class="k">else</span> <span class="nx">w</span><span class="p">;</span>
+<span class="mf">2.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">y</span><span class="p">)</span> <span class="nx">z</span><span class="p">;</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">w</span> <span class="o">!=</span> <span class="nx">u</span><span class="p">)</span> <span class="nx">v</span><span class="p">;</span>
+<span class="mf">3.</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span> <span class="nx">z</span><span class="p">;</span> <span class="nx">w</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nx">u</span><span class="p">;</span>
+<span class="mf">4.</span> <span class="k">if</span> <span class="p">((</span><span class="nx">x</span> <span class="o">!=</span> <span class="nx">y</span><span class="p">)</span> <span class="nx">and</span> <span class="p">(</span><span class="nx">z</span> <span class="o">&gt;</span> <span class="nx">w</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="nx">y</span> <span class="o">:=</span> <span class="nx">sin</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">/</span> <span class="nx">u</span><span class="p">;</span>
+    <span class="nx">z</span> <span class="o">:=</span> <span class="nx">w</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nx">z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="nx">w</span> <span class="o">:=</span> <span class="nx">abs</span> <span class="p">(</span><span class="nx">x</span> <span class="o">-</span> <span class="nx">y</span><span class="p">)</span> <span class="o">+</span> <span class="nx">z</span><span class="p">;</span>
+    <span class="nx">u</span> <span class="o">:=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="nx">y</span> <span class="o">?</span> <span class="mi">2</span><span class="nx">u</span> <span class="o">:</span> <span class="mi">3</span><span class="nx">u</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">switch</span>
+<span class="p">{</span>
+  <span class="k">case</span> <span class="nx">x</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">z</span><span class="p">)</span> <span class="o">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="nx">x</span> <span class="o">/</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">y</span> <span class="o">-</span> <span class="nx">z</span><span class="p">);</span>
+  <span class="k">case</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">3</span>       <span class="o">:</span> <span class="nx">sin</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>
+  <span class="k">default</span>          <span class="o">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="nx">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />

@@ -155,6 +155,47 @@
 控制结构语句
 -------------------------------
 
+  if
+  ^^^^^^^^^^^
+  .. code-block:: javascript
+      :linenos:
+
+      1. if (x, y, z)
+      2. if ((x + 1) > 2y, z + 1, w / v)
+      3. if (x > y) z; 
+      4. if (x <= 2*y) { z + w }; 
+
+  if-else
+  ^^^^^^^^^^^
+  .. code-block:: javascript
+      :linenos:
+
+      1. if (x > y) z; else w;            
+      2. if (x > y) z; else if (w != u) v;
+      3. if (x < y) { z; w + 1; } else u; 
+      4. if ((x != y) and (z > w))        
+        {                                
+          y := sin(x) / u;               
+          z := w + 1;                    
+        }                                
+        else if (x > (z + 1))            
+        {                                
+          w := abs (x - y) + z;          
+          u := (x + 1) > 2y ? 2u : 3u;   
+        } 
+
+  switch
+  ^^^^^^^^^^^
+  .. code-block:: javascript
+      :linenos:
+
+      switch                                   
+      {                                        
+        case x > (y + z) : 2 * x / abs(y - z); 
+        case x < 3       : sin(x + y);         
+        default          : 1 + x;              
+      }                                        
+
 +----------+---------------------------------------------------------+
 | 结构     | 示例                                                    |
 +----------+---------------------------------------------------------+
