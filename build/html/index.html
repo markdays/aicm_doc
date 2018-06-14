@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>目录： &mdash; AICloudMaster 0.0.1 documentation</title>
+  <title>介绍 &mdash; AICloudMaster 0.0.1 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="介绍" href="start/intro.html" /> 
+    <link rel="next" title="快速上手" href="strategies/turorial.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -81,11 +81,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">开始</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="start/intro.html">介绍</a></li>
-</ul>
-<p class="caption"><span class="caption-text">策略开发</span></p>
+              <p class="caption"><span class="caption-text">策略开发</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="strategies/turorial.html">快速上手</a></li>
 <li class="toctree-l1"><a class="reference internal" href="strategies/express.html">表达式运算</a></li>
@@ -155,7 +151,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>目录：</li>
+      <li>介绍</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,8 +189,54 @@
     margin-right: 4px;  /* make room for the exclamation icon */
 }
 </style>
-<div class="section" id="id1">
-<h1>目录：<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="start-intro">
+<span id="id1"></span><h1>介绍<a class="headerlink" href="#start-intro" title="Permalink to this headline">¶</a></h1>
+<p>AICloudMaster是一套完整的量化投资平台。该平台由三个子系统组成：QuantLab策略开发子系统，QuantRobot模拟交易子系
+统和QuantCloud实盘交易云服务子系统。平台全部用C/C++语言开发，相较其他脚本开发系统运行效率高。平台以交易作为功能
+核心，高效率、高并发、高可靠。</p>
+<p>另外，平台提供了微信公众号和小程序云服务器客户端，对云服务器进行管理。</p>
+<div class="section" id="id2">
+<h2>特点<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="92%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>易开发</td>
+<td>策略开发易学，上手快。能编写算术表达式即可编写交易策略。</td>
+</tr>
+<tr class="row-even"><td>更可靠</td>
+<td>策略经过历史数据回溯测试和模拟交易，进行验证后，再做实盘交易更可靠。</td>
+</tr>
+<tr class="row-odd"><td>云托管</td>
+<td>云服务器托管交易系统，24小时运行，无须实时盯盘，夜盘无忧。</td>
+</tr>
+<tr class="row-even"><td>随身行</td>
+<td>手机终端实时登录云服务器，查看交易运行情况，外出、旅行不影响交易。</td>
+</tr>
+<tr class="row-odd"><td>时掌握</td>
+<td>微信实时通知查阅交易结果，轻松掌握。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>下载安装<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>请首先关注微信公众号：aicloudmaster</p>
+<img alt="_images/qrcode_aicm_258.jpg" class="align-center" src="_images/qrcode_aicm_258.jpg" />
+<p>点击左下角菜单【获取程序】，然后根据提供的下载链接下载安装包。
+一共有两个安装包可以下载，分别是“策略开发测试”（QuantLab）和“模拟交易”（QuantRobot）</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">安装程序仅支持Windows 64位操作系统。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>运行环境<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>本系统为了节省系统开发工作量和数据维护难度，系统本身并不维护历史行情数据。所以，历史行情数据需要第三方行情软件支持。
+股票部分可以使用通达信行情软件历史数据，期货部分可以使用文华财经历史数据。这两个软件都支持免费行情，各个证券和期货
+公司都提供相关的安装程序，并可以下载补充历史行情数据。</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -203,7 +245,6 @@
 </div>
 <div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -215,7 +256,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="start/intro.html" class="btn btn-neutral float-right" title="介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="strategies/turorial.html" class="btn btn-neutral float-right" title="快速上手" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
