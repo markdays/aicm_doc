@@ -13,6 +13,7 @@ QuantLab程序的主界面如下图所示：
 每个部分是一个表达式，下面举例如下：
 
 入市表达式：
+
     .. code:: javascript
     
         cross_up(MA_FAST, MA_SLOW)

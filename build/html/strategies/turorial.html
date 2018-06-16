@@ -196,17 +196,16 @@
 <img alt="../_images/quantlab_000.png" class="align-center" src="../_images/quantlab_000.png" />
 <p>开发策略的第一步就编写策略，每个策略又分为，五个部分，分别是：入市、止损或止盈、离市、增仓和减仓。
 每个部分是一个表达式，下面举例如下：</p>
-<dl class="docutils">
-<dt>入市表达式：</dt>
-<dd><div class="first highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">cross_up</span><span class="p">(</span><span class="nx">MA_FAST</span><span class="p">,</span> <span class="nx">MA_SLOW</span><span class="p">)</span>
+<p>入市表达式：</p>
+<blockquote>
+<div><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">cross_up</span><span class="p">(</span><span class="nx">MA_FAST</span><span class="p">,</span> <span class="nx">MA_SLOW</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="last admonition note">
+<div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">快周期移动均线上穿慢周期移动均线买入</p>
 </div>
-</dd>
-</dl>
+</div></blockquote>
 <p>止损和止盈表达式：</p>
 <blockquote>
 <div><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">COST_X_ATR</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">2.0</span> <span class="nx">or</span> <span class="nx">MAXDOWN_ATR</span> <span class="o">&gt;</span> <span class="mf">0.6</span>
