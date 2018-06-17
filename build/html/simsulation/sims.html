@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="股票策略模拟" href="stock_sims.html" />
+    <link rel="prev" title="扩展API" href="../strategies/extend.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -80,14 +82,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">开始</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../start/intro.html">介绍</a></li>
-</ul>
-<p class="caption"><span class="caption-text">策略开发</span></p>
+              <p class="caption"><span class="caption-text">策略开发</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/turorial.html">快速上手</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../strategies/express.html">策略表达式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/express.html">表达式运算</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/function.html">功能函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/function.html#id2">组合持仓上下文变量</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/indactor.html">技术指标</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/finance.html">财务数据</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/stk_strategy.html">股票策略</a></li>
@@ -96,11 +96,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../strategies/extend.html">扩展API</a></li>
 </ul>
 <p class="caption"><span class="caption-text">模拟交易</span></p>
-<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">QuantRobot程序</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">参数设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">数据源设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">历史行情源</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">实时行情源</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="stock_sims.html">股票策略模拟</a></li>
 <li class="toctree-l1"><a class="reference internal" href="future_sims.html">期货策略模拟</a></li>
 </ul>
-<p class="caption"><span class="caption-text">实盘云服务器</span></p>
+<p class="caption"><span class="caption-text">实盘云服务</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../trading/cloudtrading.html">实盘交易</a></li>
 </ul>
@@ -195,6 +206,37 @@
 <span id="simulation-sims"></span><h1>QuantRobot程序<a class="headerlink" href="#quantrobot" title="Permalink to this headline">¶</a></h1>
 <p>QuantRobot程序的主界面如下图所示：</p>
 <img alt="../_images/quantrobot_000.png" class="align-center" src="../_images/quantrobot_000.png" />
+<div class="section" id="id1">
+<h2>参数设置<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>数据源设置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>点击菜单【参数】-&gt;【选项】，打开设置对话框，如图所示：</p>
+<div class="section" id="id3">
+<h4>历史行情源<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>股票历史行情源，可以设置为“通达信”，选择通达信行情软件的安装目录，如“d：new_gxzq_v6”。</p>
+<p>期货历史行情源，可以设置为“文华财经”，选择文华财经行情软件的安装目录，如“d：wh6”。</p>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h4>实时行情源<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>股票实时行情源，可以设置为“新浪”，并将“启动WEB行情”选项，设置为“True”。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">注意：WEB行情源通常会有3秒左右的延时。</p>
+</div>
+<p>期货实时行情源可以使用CTP行情源，首先必须开通一个期货账户，如果您已经开通了期货交易账户，可以在期货公司哪里得到
+CTP行情服务器的设置，如果没有，可以到SimNow仿真交易网站[www.simnow.com.cn &lt;<a class="reference external" href="http://www.simnow.com.cn/">http://www.simnow.com.cn/</a>&gt;]免费
+注册一个账号。</p>
+<p>有了账号以后，打开设置对话框中的“数据管理”选卡项，点击【设置CTP行情服务器】按钮，弹出设置对话框，如下图：</p>
+<img alt="../_images/setting_dlg_ctp.png" class="align-center" src="../_images/setting_dlg_ctp.png" />
+<p>设置好后，关闭对话框，回到前面设置行情源的位置，在“CTP行情服务器配置”选项选择“CTP行情服务器”，并将“启动CTP行情”
+选项，设置为“True”。</p>
+</div></blockquote>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -202,6 +244,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="stock_sims.html" class="btn btn-neutral float-right" title="股票策略模拟" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../strategies/extend.html" class="btn btn-neutral" title="扩展API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>功能函数 &mdash; AICloudMaster 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="技术指标" href="indactor.html" />
+    <link rel="prev" title="表达式运算" href="express.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AICloudMaster
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">策略开发</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="turorial.html">快速上手</a></li>
+<li class="toctree-l1"><a class="reference internal" href="express.html">表达式运算</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">功能函数</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cross-up-fast-slow">cross_up(fast, slow)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cross-down-fast-slow">cross_down(fast, slow)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entry-signal">entry_signal()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exit-signal">exit_signal()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stop-loss">stop_loss()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stop-profit">stop_profit()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fin-info-category-index">fin_info(category, index)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#factor-indictor">factor(indictor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#factor-prev-indictor">factor_prev(indictor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#long-factor-indictor">long_factor(indictor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#long-factor-prev-indictor">long_factor_prev(indictor)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id2">组合持仓上下文变量</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cost-x-atr">COST_X_ATR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maxdown-atr">MAXDOWN_ATR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stddev-atr">STDDEV_ATR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pnl">PNL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hold-day-num">HOLD_DAY_NUM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#current-time">CURRENT_TIME</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="indactor.html">技术指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">财务数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stk_strategy.html">股票策略</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fut_strategy.html">期货策略</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backtest.html">回溯测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">扩展API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">模拟交易</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../simsulation/sims.html">QuantRobot程序</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simsulation/stock_sims.html">股票策略模拟</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simsulation/future_sims.html">期货策略模拟</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实盘云服务</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../trading/cloudtrading.html">实盘交易</a></li>
+</ul>
+<p class="caption"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/development.html">定制开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/content.html">联系我们</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AICloudMaster</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>功能函数</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/strategies/function.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="strategy-function">
+<span id="id1"></span><h1>功能函数<a class="headerlink" href="#strategy-function" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cross-up-fast-slow">
+<h2>cross_up(fast, slow)<a class="headerlink" href="#cross-up-fast-slow" title="Permalink to this headline">¶</a></h2>
+<p>两个指标变量向上交叉。</p>
+</div>
+<div class="section" id="cross-down-fast-slow">
+<h2>cross_down(fast, slow)<a class="headerlink" href="#cross-down-fast-slow" title="Permalink to this headline">¶</a></h2>
+<p>两个指标变量向下交叉。</p>
+</div>
+<div class="section" id="entry-signal">
+<h2>entry_signal()<a class="headerlink" href="#entry-signal" title="Permalink to this headline">¶</a></h2>
+<p>入市信号</p>
+</div>
+<div class="section" id="exit-signal">
+<h2>exit_signal()<a class="headerlink" href="#exit-signal" title="Permalink to this headline">¶</a></h2>
+<p>离市信号</p>
+</div>
+<div class="section" id="stop-loss">
+<h2>stop_loss()<a class="headerlink" href="#stop-loss" title="Permalink to this headline">¶</a></h2>
+<p>止损信号</p>
+</div>
+<div class="section" id="stop-profit">
+<h2>stop_profit()<a class="headerlink" href="#stop-profit" title="Permalink to this headline">¶</a></h2>
+<p>止盈信号</p>
+</div>
+<div class="section" id="fin-info-category-index">
+<h2>fin_info(category, index)<a class="headerlink" href="#fin-info-category-index" title="Permalink to this headline">¶</a></h2>
+<p>财务指标因子引用函数。参数category：财务指标数据的分类编号；参数index：财务数据的在分类中的索引编号。</p>
+</div>
+<div class="section" id="factor-indictor">
+<h2>factor(indictor)<a class="headerlink" href="#factor-indictor" title="Permalink to this headline">¶</a></h2>
+<p>因子引用函数，参数indictor：技术指标等因子名称。</p>
+</div>
+<div class="section" id="factor-prev-indictor">
+<h2>factor_prev(indictor)<a class="headerlink" href="#factor-prev-indictor" title="Permalink to this headline">¶</a></h2>
+<p>因子前值引用函数，参数indictor：技术指标等因子名称。</p>
+</div>
+<div class="section" id="long-factor-indictor">
+<h2>long_factor(indictor)<a class="headerlink" href="#long-factor-indictor" title="Permalink to this headline">¶</a></h2>
+<p>长周期因子引用函数，参数indictor：技术指标等因子名称。</p>
+</div>
+<div class="section" id="long-factor-prev-indictor">
+<h2>long_factor_prev(indictor)<a class="headerlink" href="#long-factor-prev-indictor" title="Permalink to this headline">¶</a></h2>
+<p>长周期因子前值引用函数，参数indictor：技术指标等因子名称。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h1>组合持仓上下文变量<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cost-x-atr">
+<h2>COST_X_ATR<a class="headerlink" href="#cost-x-atr" title="Permalink to this headline">¶</a></h2>
+<p>持仓成本与ATR指标的比值。</p>
+</div>
+<div class="section" id="maxdown-atr">
+<h2>MAXDOWN_ATR<a class="headerlink" href="#maxdown-atr" title="Permalink to this headline">¶</a></h2>
+<p>最大回撤与ATR指标的比值。</p>
+</div>
+<div class="section" id="stddev-atr">
+<h2>STDDEV_ATR<a class="headerlink" href="#stddev-atr" title="Permalink to this headline">¶</a></h2>
+<p>标准差与ATR指标的比值。</p>
+</div>
+<div class="section" id="pnl">
+<h2>PNL<a class="headerlink" href="#pnl" title="Permalink to this headline">¶</a></h2>
+<p>当前持仓收益。</p>
+</div>
+<div class="section" id="hold-day-num">
+<h2>HOLD_DAY_NUM<a class="headerlink" href="#hold-day-num" title="Permalink to this headline">¶</a></h2>
+<p>持仓天数。</p>
+</div>
+<div class="section" id="current-time">
+<h2>CURRENT_TIME<a class="headerlink" href="#current-time" title="Permalink to this headline">¶</a></h2>
+<p>当前时间。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="indactor.html" class="btn btn-neutral float-right" title="技术指标" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="express.html" class="btn btn-neutral" title="表达式运算" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Andy.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

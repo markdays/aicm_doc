@@ -50,6 +50,7 @@ AICloudMaster是一套完整的量化投资平台。该平台由三个子系统�
 
     strategies/turorial
     strategies/express
+    strategies/function
     strategies/indactor
     strategies/finance
     strategies/stk_strategy
