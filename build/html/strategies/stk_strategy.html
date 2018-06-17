@@ -86,6 +86,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="turorial.html">快速上手</a></li>
 <li class="toctree-l1"><a class="reference internal" href="express.html">表达式运算</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function.html">功能函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function.html#id2">组合持仓关联变量</a></li>
 <li class="toctree-l1"><a class="reference internal" href="indactor.html">技术指标</a></li>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">财务数据</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">股票策略</a></li>
@@ -192,7 +194,32 @@
 </style>
 <div class="section" id="strategy-stk">
 <span id="id1"></span><h1>股票策略<a class="headerlink" href="#strategy-stk" title="Permalink to this headline">¶</a></h1>
-<p>编辑中...</p>
+<p>点击菜单“数据”-&gt;“选股&amp;策略编辑管理”，弹出对话框，如下图：</p>
+<blockquote>
+<div><img alt="../_images/strategy_dlg.png" class="align-center" src="../_images/strategy_dlg.png" />
+</div></blockquote>
+<p>点开左侧策略图标，展开树目录，会看到已有的交易策略，可以新增交易策略。选股在“用途”设置项必须设置成“策略”。</p>
+<p>下面是一些股票策略的JSON格式数据：</p>
+<blockquote>
+<div><ul class="simple">
+<li>STK-BK-BUL-D</li>
+</ul>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="s">&quot;barsize&quot;</span> <span class="o">:</span> <span class="mi">7</span><span class="o">,</span>
+<span class="s">&quot;expr0&quot;</span> <span class="o">:</span> <span class="s">&quot;cross_up(TYPICAL_PRICE,SQUEEZE_BAND_UPL) and factor(SQUEEZE_GAP)&gt;0.618&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr1&quot;</span> <span class="o">:</span> <span class="s">&quot;(COST_X_ATR&lt;-2*STDDEV_ATR and factor(TL_FAST)&lt;0) or (COST_X_ATR&gt;0.4 and COST_X_ATR+MAXDOWN_ATR&gt;STDDEV_ATR and (COST_X_ATR&lt;1.6*MAXDOWN_ATR or MAXDOWN_ATR&gt;STDDEV_ATR) and factor(LR_SLOPE_FAST)&lt;factor(LR_SLOPE_SLOW_THRESHOLD) and factor(LR_SLOPE_MIDD)&lt;factor(LR_SLOPE_FAST_THRESHOLD)) or (COST_X_ATR&gt;3*STDDEV_ATR and MAXDOWN_ATR&gt;0.6 and factor_prev(LR_SLOPE_FAST)&gt;factor(LR_SLOPE_FAST))&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr2&quot;</span> <span class="o">:</span> <span class="s">&quot;cross_down(LR_SLOPE_FAST,LR_SLOPE_FAST_THRESHOLD)&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr3&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr4&quot;</span> <span class="o">:</span> <span class="s">&quot;COST_X_ATR&gt;4 and MAXDOWN_ATR&gt;0.618&quot;</span><span class="o">,</span>
+<span class="s">&quot;group&quot;</span> <span class="o">:</span> <span class="mi">15</span><span class="o">,</span>
+<span class="s">&quot;id&quot;</span> <span class="o">:</span> <span class="s">&quot;06160920101246000&quot;</span><span class="o">,</span>
+<span class="s">&quot;name&quot;</span> <span class="o">:</span> <span class="s">&quot;STK-BK-BUL-D&quot;</span><span class="o">,</span>
+<span class="s">&quot;remark&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;used&quot;</span> <span class="o">:</span> <span class="s">&quot;策略&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 
 
