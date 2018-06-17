@@ -50,15 +50,6 @@ factor_prev(indictor)
 
 因子前值引用函数，参数indictor：技术指标等因子名称。
 
-long_factor(indictor)
-=========================
-
-长周期因子引用函数，参数indictor：技术指标等因子名称。
-
-long_factor_prev(indictor)
-============================
-
-长周期因子前值引用函数，参数indictor：技术指标等因子名称。
 
 ==================
 组合持仓上下文变量

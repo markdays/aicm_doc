@@ -102,6 +102,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#id2">数据源设置</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id3">历史行情源</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id4">实时行情源</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">设置有效市场</a></li>
 </ul>
 </li>
 </ul>
@@ -214,8 +215,13 @@
 <div class="section" id="id3">
 <h4>历史行情源<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>股票历史行情源，可以设置为“通达信”，选择通达信行情软件的安装目录，如“d：new_gxzq_v6”。</p>
-<p>期货历史行情源，可以设置为“文华财经”，选择文华财经行情软件的安装目录，如“d：wh6”。</p>
+<div><p>股票历史行情源，可以设置为“通达信”，选择通达信行情软件的安装目录，如“d：\new_gxzq_v6”。</p>
+<p>期货历史行情源，可以设置为“文华财经”，选择文华财经行情软件的安装目录，如“d：\wh6”。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">注意：通达信的历史数据在每天收盘后，需要手动下载补充。文华财经的历史数据主要用于回测，模拟交易时有CTP实时行情，
+会自动补充。</p>
+</div>
 </div></blockquote>
 </div>
 <div class="section" id="id4">
@@ -227,13 +233,21 @@
 <p class="last">注意：WEB行情源通常会有3秒左右的延时。</p>
 </div>
 <p>期货实时行情源可以使用CTP行情源，首先必须开通一个期货账户，如果您已经开通了期货交易账户，可以在期货公司哪里得到
-CTP行情服务器的设置，如果没有，可以到SimNow仿真交易网站[www.simnow.com.cn &lt;<a class="reference external" href="http://www.simnow.com.cn/">http://www.simnow.com.cn/</a>&gt;]免费
+CTP行情服务器的设置，如果没有，可以到SimNow仿真交易网站[.. _www.simnow.com.cn:<a class="reference external" href="http://www.simnow.com.cn">http://www.simnow.com.cn</a>]免费
 注册一个账号。</p>
 <p>有了账号以后，打开设置对话框中的“数据管理”选卡项，点击【设置CTP行情服务器】按钮，弹出设置对话框，如下图：</p>
 <img alt="../_images/setting_dlg_ctp.png" class="align-center" src="../_images/setting_dlg_ctp.png" />
 <p>设置好后，关闭对话框，回到前面设置行情源的位置，在“CTP行情服务器配置”选项选择“CTP行情服务器”，并将“启动CTP行情”
 选项，设置为“True”。</p>
 </div></blockquote>
+</div>
+<div class="section" id="id5">
+<h4>设置有效市场<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>在【选项】的“参数选项”选卡的右边，根据交易标的的目标市场，勾选相应的交易市场。</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">只有选中的交易市场，系统启动后才会有效。但选的越多，对系统运行负担越重，所以尽量按需选取！</p>
+</div>
 </div>
 </div>
 </div>
