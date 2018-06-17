@@ -87,7 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../strategies/turorial.html">快速上手</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/express.html">表达式运算</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/function.html">功能函数</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../strategies/function.html#id2">组合持仓上下文变量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/function.html#id2">组合持仓关联变量</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/indactor.html">技术指标</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/finance.html">财务数据</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/stk_strategy.html">股票策略</a></li>
@@ -212,6 +212,10 @@
 <div class="section" id="id2">
 <h3>数据源设置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>点击菜单【参数】-&gt;【选项】，打开设置对话框，如图所示：</p>
+<blockquote>
+<div><img alt="../_images/setting_dlg.png" class="align-center" src="../_images/setting_dlg.png" />
+<p>在“参数选项”下的，行情参数设置区，可以找到数据源的相关设置选项。</p>
+</div></blockquote>
 <div class="section" id="id3">
 <h4>历史行情源<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <blockquote>
@@ -233,8 +237,9 @@
 <p class="last">注意：WEB行情源通常会有3秒左右的延时。</p>
 </div>
 <p>期货实时行情源可以使用CTP行情源，首先必须开通一个期货账户，如果您已经开通了期货交易账户，可以在期货公司哪里得到
-CTP行情服务器的设置，如果没有，可以到SimNow仿真交易网站[.. _www.simnow.com.cn:<a class="reference external" href="http://www.simnow.com.cn">http://www.simnow.com.cn</a>]免费
-注册一个账号。</p>
+CTP行情服务器的设置，如果没有，可以到SimNow仿真交易网站[
+.. _www.simnow.com.cn: <a class="reference external" href="http://www.simnow.com.cn">http://www.simnow.com.cn</a>
+]免费注册一个账号。</p>
 <p>有了账号以后，打开设置对话框中的“数据管理”选卡项，点击【设置CTP行情服务器】按钮，弹出设置对话框，如下图：</p>
 <img alt="../_images/setting_dlg_ctp.png" class="align-center" src="../_images/setting_dlg_ctp.png" />
 <p>设置好后，关闭对话框，回到前面设置行情源的位置，在“CTP行情服务器配置”选项选择“CTP行情服务器”，并将“启动CTP行情”
