@@ -15,12 +15,12 @@
 联系方式
 ==================
 
-    * 加微信：
+* 加微信：
 
-        .. image:: /_static/images/mmqrcode_cloudmaster.png
-            :align: center
-            :scale: 50%
-            :alt: 微信扫码加好友！
+    .. image:: /_static/images/mmqrcode_cloudmaster.png
+        :align: center
+        :scale: 50%
+        :alt: 微信扫码加好友！
 
 
-    * `Email: 63766209@qq.com <63766209@qq.com>`_
+* `Email: 63766209@qq.com <63766209@qq.com>`_
