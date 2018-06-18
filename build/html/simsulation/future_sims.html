@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>期货策略模拟 &mdash; AICloudMaster 0.0.1 documentation</title>
+  <title>期货策略模拟交易 &mdash; AICloudMaster 0.0.1 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="实盘交易" href="../trading/cloudtrading.html" />
-    <link rel="prev" title="股票策略模拟" href="stock_sims.html" /> 
+    <link rel="prev" title="股票策略模拟交易" href="stock_sims.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -87,7 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../strategies/turorial.html">快速上手</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/express.html">表达式运算</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/function.html">功能函数</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../strategies/function.html#id2">组合持仓上下文变量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/function.html#id2">组合持仓关联变量</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/indactor.html">技术指标</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/finance.html">财务数据</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/stk_strategy.html">股票策略</a></li>
@@ -98,8 +98,13 @@
 <p class="caption"><span class="caption-text">模拟交易</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="sims.html">QuantRobot程序</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stock_sims.html">股票策略模拟</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">期货策略模拟</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stock_sims.html">股票策略模拟交易</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">期货策略模拟交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">期货组合设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">期货策略设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">期货策略管理</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">实盘云服务</span></p>
 <ul>
@@ -107,8 +112,9 @@
 </ul>
 <p class="caption"><span class="caption-text">其他</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../misc/development.html">定制开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../misc/content.html">联系我们</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/development.html">策略定制开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/content.html">合伙人招募</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/content.html#id2">联系我们</a></li>
 </ul>
 
             
@@ -154,7 +160,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>期货策略模拟</li>
+      <li>期货策略模拟交易</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,8 +199,88 @@
 }
 </style>
 <div class="section" id="simulation-future">
-<span id="id1"></span><h1>期货策略模拟<a class="headerlink" href="#simulation-future" title="Permalink to this headline">¶</a></h1>
-<p>编辑中...</p>
+<span id="id1"></span><h1>期货策略模拟交易<a class="headerlink" href="#simulation-future" title="Permalink to this headline">¶</a></h1>
+<p>第一步是设置好投资组合和期货策略，通常是多头和空头一对策略。然后绑定投资组合，设置交易合约，配置策略参数，即可运行。</p>
+<div class="section" id="id2">
+<h2>期货组合设置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>点击菜单“数据”-&gt;“组合管理”，弹出对话框，如下图：</p>
+<blockquote>
+<div><img alt="../_images/portfolio_manager.png" class="align-center" src="../_images/portfolio_manager.png" />
+<ul class="simple">
+<li>在【组合类型】选项中，选择“期货”。</li>
+<li>在【本金（份额）】选项中，设置起始本金。</li>
+<li>在【交易账户】选项中，必须选择“Simulation”。</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>期货策略设置<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>点击菜单“数据”-&gt;“选股&amp;策略编辑管理”，弹出对话框，如下图：</p>
+<blockquote>
+<div><img alt="../_images/strategy_dlg.png" class="align-center" src="../_images/strategy_dlg.png" />
+</div></blockquote>
+<p>点开左侧策略图标，展开树目录，会看到已有的交易策略，可以新增交易策略。选股在“用途”设置项必须设置成“策略”。</p>
+<p>期货策略通常是由一个多头策略和一个空头策略组成，当然只设置其中一个也可以。</p>
+<p>下面是一些期货策略的JSON格式数据：</p>
+<blockquote>
+<div><ul class="simple">
+<li>FUT-AW-R-LONG</li>
+</ul>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="s">&quot;barsize&quot;</span> <span class="o">:</span> <span class="mi">6</span><span class="o">,</span>
+<span class="s">&quot;expr0&quot;</span> <span class="o">:</span> <span class="s">&quot;(entry_signal(td_long,ent_lrs_fast) or entry_signal(td_long,ent_hyo_over)) and  factor(TATR)/factor(CLOSE)&gt;0.0025 and trend_level(fd_main,tl_stddev)&gt;=2 and factor(TL_FAST)&gt;0&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr1&quot;</span> <span class="o">:</span> <span class="s">&quot;(trend_level(fd_main,tl_stddev)&lt;=2 and stop_profit(td_long, sp_trace,0.5)) or (trend_level(fd_main,tl_stddev)&gt;2 and stop_profit(td_long,sp_maxdown,1)) or stop_loss(td_long,sl_mult_stddev,3)&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr2&quot;</span> <span class="o">:</span> <span class="s">&quot;(trend_level(fd_main,tl_stddev)&lt;=2 and exit_signal(td_long, ext_lrs_fast)) or (trend_level(fd_main,tl_stddev)&gt;2 and exit_signal(td_long, ext_hyo_cross))&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr3&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr4&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;group&quot;</span> <span class="o">:</span> <span class="mi">80</span><span class="o">,</span>
+<span class="s">&quot;id&quot;</span> <span class="o">:</span> <span class="s">&quot;00180403222144000&quot;</span><span class="o">,</span>
+<span class="s">&quot;name&quot;</span> <span class="o">:</span> <span class="s">&quot;FUT-AW-R-LONG&quot;</span><span class="o">,</span>
+<span class="s">&quot;remark&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;used&quot;</span> <span class="o">:</span> <span class="s">&quot;策略&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>FUT-AW-R-SHORT</li>
+</ul>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="s">&quot;barsize&quot;</span> <span class="o">:</span> <span class="mi">6</span><span class="o">,</span>
+<span class="s">&quot;expr0&quot;</span> <span class="o">:</span> <span class="s">&quot;(entry_signal(td_short,ent_lrs_fast) or entry_signal(td_short,ent_hyo_over)) and  factor(TATR)/factor(CLOSE)&gt;0.0025 and trend_level(fd_main,tl_stddev)&gt;=2 and factor(TL_FAST)&lt;0&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr1&quot;</span> <span class="o">:</span> <span class="s">&quot;(trend_level(fd_main,tl_stddev)&lt;=2 and stop_profit(td_short, sp_trace,0.5)) or (trend_level(fd_main,tl_stddev)&gt;2 and stop_profit(td_short,sp_maxdown,1)) or stop_loss(td_short,sl_mult_stddev,3)&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr2&quot;</span> <span class="o">:</span> <span class="s">&quot;(trend_level(fd_main,tl_stddev)&lt;=2 and exit_signal(td_short, ext_lrs_fast)) or (trend_level(fd_main,tl_stddev)&gt;2 and exit_signal(td_short, ext_hyo_cross))&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr3&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;expr4&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;group&quot;</span> <span class="o">:</span> <span class="mi">80</span><span class="o">,</span>
+<span class="s">&quot;id&quot;</span> <span class="o">:</span> <span class="s">&quot;00180403222300001&quot;</span><span class="o">,</span>
+<span class="s">&quot;name&quot;</span> <span class="o">:</span> <span class="s">&quot;FUT-AW-R-SHORT&quot;</span><span class="o">,</span>
+<span class="s">&quot;remark&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">,</span>
+<span class="s">&quot;used&quot;</span> <span class="o">:</span> <span class="s">&quot;策略&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>期货策略管理<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>点击主窗口上方的【实时交易】页面选卡，显示如下界面：</p>
+<blockquote>
+<div><img alt="../_images/fut_realtime_view.png" class="align-center" src="../_images/fut_realtime_view.png" />
+</div></blockquote>
+<p>然后，再点击右上方的【配置】按钮，弹出“期货策略管理”对话框，如下图所示：</p>
+<blockquote>
+<div><img alt="../_images/fut_strategy_manager.png" class="align-center" src="../_images/fut_strategy_manager.png" />
+<ul class="simple">
+<li>在【投资组合】选项中，选择之前配置好的组合。</li>
+<li>在【运行模式】选项中，选择实盘。</li>
+<li>在【多头策略】选项中，选择之前设置好的多头期货策略。</li>
+<li>在【空头策略】选项中，选择之前设置好的空头期货策略。</li>
+<li>在【多头策略】选项中，选择之前设置好的多头期货策略。</li>
+<li>在对话框左下侧显示了当前主力期货列表，通过双节，可以选入右下方列表，作为策略交易目标合约。</li>
+</ul>
+</div></blockquote>
+<p>做好其他参数的设置，然后保存设置即可。</p>
+</div>
 </div>
 
 
@@ -208,7 +294,7 @@
         <a href="../trading/cloudtrading.html" class="btn btn-neutral float-right" title="实盘交易" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="stock_sims.html" class="btn btn-neutral" title="股票策略模拟" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="stock_sims.html" class="btn btn-neutral" title="股票策略模拟交易" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
