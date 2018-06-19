@@ -79,5 +79,4 @@ AICloudMaster是一套完整的量化投资平台。该平台由三个子系统�
     :caption: 其他
     :hidden:
 
-    misc/development
     misc/content
